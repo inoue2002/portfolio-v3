@@ -9,9 +9,10 @@ export default function Activities() {
       <Spacer marginTop={'10px'} />
       <Heading as="u" size="md" marginTop={'5px'}>
         <a
-          href="https://critica.uno/"
+          href="https://www.line-community.me/ja/apiexpert/detail/60adb082851f7443b473e746"
           target="_blank"
           rel="noopener noreferrer"
+          title="line api expert"
         >
           LINE社認定LINEAPIExpert
         </a>
@@ -32,6 +33,7 @@ export default function Activities() {
           href="https://sugokunaritai.dev/"
           target="_blank"
           rel="noopener noreferrer"
+          title='すごくなりたいがくせいぐるーぷ'
         >
           すごくなりたいがくせいぐるーぷ代表
         </a>

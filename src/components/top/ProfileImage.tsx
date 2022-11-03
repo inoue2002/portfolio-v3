@@ -6,8 +6,9 @@ export default function Profile() {
       <Image
         src="/images/profile.jpg"
         alt="profile image "
-        boxSize='300px'
+        boxSize="300px"
         borderRadius="full"
+        title="プロフィール画像"
       />
     </div>
   )

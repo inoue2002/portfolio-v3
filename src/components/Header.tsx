@@ -38,12 +38,12 @@ export default function Header() {
         spacing="40px"
         mt={{ base: 4, md: 0 }}
       >
-        <Link href="/">
+        <Link href="/" title={'top'}>
           <Heading fontSize={'2xl'} as="b" display={{ base: 'block' }}>
             About
           </Heading>
         </Link>
-        <Link href={'news'}>
+        <Link href={'news'} title={'link'}>
           <Heading fontSize={'2xl'} as="b">
             News
           </Heading>
