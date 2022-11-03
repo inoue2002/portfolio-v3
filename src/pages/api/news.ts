@@ -27,7 +27,7 @@ export default function news(
           '/news/portfolio.png',
         date: new Date('2022/11/3'),
         content:
-          '2年前にNuxt.jsの勉強で作成したものを今まで使っていましたが、長い時間放置してしまったので、Next.js + typeScript に書き換えました✌️',
+          '2年前にNuxt.jsの勉強で作成したものを今まで使っていましたが、長い時間放置してしまったので、Next.js + TypeScript に書き換えました✌️',
         tags: ['プログラミング', 'ポートフォリオ'],
         url: 'https://youkan.me',
       },
