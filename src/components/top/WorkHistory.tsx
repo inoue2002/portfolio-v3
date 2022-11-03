@@ -8,7 +8,7 @@ export default function WorkHistory() {
       </Heading>
       <Spacer marginTop={'10px'} />
       <Heading as="h3" size="md" marginTop={'5px'}>
-        2020/03~ GONENGOLLC(受託開発・小学生向けプログラミング事業)
+        2020/03~ GONENGOLLC(受託開発・小学生向けプログラミング教育事業)
       </Heading>
       <Heading as="h3" size="md" marginTop={'5px'}>
         2021/05~2021/12 株式会社Civichat(自社開発)
