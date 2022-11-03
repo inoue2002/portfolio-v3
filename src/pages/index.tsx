@@ -1,8 +1,12 @@
-import { Box, chakra } from '@chakra-ui/react'
+import Footer from 'src/components/Footer'
+import Header from 'src/components/Header'
+import Top from 'src/components/Top'
 export default function Home() {
   return (
-    <Box>
-      <chakra.h2 color="tomato">Hello World!</chakra.h2>
-    </Box>
+    <div>
+      <Header />
+      <Top />
+      <Footer />
+    </div>
   )
 }
