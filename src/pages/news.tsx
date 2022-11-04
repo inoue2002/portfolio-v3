@@ -1,4 +1,3 @@
-import Header from 'src/components/Header'
 import News from 'src/components/News'
 
 import { useEffect, useState } from 'react'
@@ -14,10 +13,5 @@ export default function NewsPage() {
     fetchUsers()
   }, [])
 
-  return (
-    <div>
-      <Header />
-      {news ? <News news={news} /> : ''}
-    </div>
-  )
+  return <div>{news ? <News news={news} /> : ''}</div>
 }

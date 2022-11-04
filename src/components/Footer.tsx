@@ -2,6 +2,7 @@ import {
   Box,
   chakra,
   Container,
+  Link,
   Stack,
   Text,
   useColorModeValue,
@@ -59,7 +60,9 @@ export default function Footer() {
         justify={{ base: 'center', md: 'space-between' }}
         align={{ base: 'center', md: 'center' }}
       >
-        <Text>© 2022 Yosuke Inoue</Text>
+        <Text>
+          © 2022 Yosuke Inoue / <Link href="/policy" textDecoration={'underline'}>プライバシーポリシー</Link>
+        </Text>
         <Stack direction={'row'} spacing={6}>
           <SocialButton
             label={'Twitter'}
