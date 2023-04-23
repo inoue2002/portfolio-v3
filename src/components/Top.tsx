@@ -38,7 +38,7 @@ export default function Top() {
         </Text>
         <Spacer />
         <Text fontSize={'2xl'} display={'block'} as="b">
-          得意なソフトウェア領域を応用し、いかに新しい価値を生み出せるかを考えています。最近興味があるのはコミュニティ運営・空き家活用・認証フレンドリーシティなどです。
+          得意なソフトウェア領域を応用し、いかに新しい価値を生み出せるかを考えています。最近興味があるのはコミュニティ運営・空き家活用などです。
         </Text>
       </Box>
       <Box style={{ marginTop: '20px' }}>

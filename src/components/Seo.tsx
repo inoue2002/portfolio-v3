@@ -20,7 +20,7 @@ const Seo: VFC<MetaData> = ({
 }) => {
   const defaultTitle = '井上陽介（ようかん）のポートフォリオ | Engineer Eventer'
   const defaultDescription =
-    '井上陽介のポートフォリオです。2002年生まれ。滋賀県の普通科高校を卒業し、現在関西大学2回生（入学1年後1年間休学）得意なソフトウェア領域を応用し、いかに新しい価値を生み出せるかを考えています。最近興味があるのはコミュニティ運営・空き家活用・認証フレンドリーシティなどです。'
+    '井上陽介のポートフォリオです。2002年生まれ。滋賀県の普通科高校を卒業し、現在関西大学2回生（入学1年後1年間休学）得意なソフトウェア領域を応用し、いかに新しい価値を生み出せるかを考えています。最近興味があるのはコミュニティ運営・空き家活用などです。'
 
   const title = pageTitle ? `${pageTitle} | ${defaultTitle}` : defaultTitle
   const description = pageDescription ? pageDescription : defaultDescription
