@@ -31,6 +31,16 @@ export default function news(
         tags: ['プログラミング', 'ポートフォリオ'],
         url: 'https://youkan.me',
       },
+      {
+        title:"LINEのトーク履歴を分析できるサービスを作りました",
+        id: 3,
+        imageUrl:
+          '/news/bunseki.png',
+        date: new Date('2023/12/21'),
+        content:"LINEのトーク履歴を送ると、そのトーク履歴を分析して、その人の特徴を分析してくれるサービスを作りました。ランキング機能もあります。ぜひ使ってみてください！",
+        tags: ['プログラミング', 'LINE',"分析"],
+        url: 'https://line-checker.vercel.app/',
+      }
     ],
   })
 }
