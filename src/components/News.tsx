@@ -11,13 +11,13 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 import React from 'react'
+import { NewsObj } from 'src/types/news'
 
 interface IBlogTags {
   tags: Array<string>
   marginTop?: SpaceProps['marginTop']
 }
 
-import type { News } from 'src/types/news'
 const BlogTags: React.FC<IBlogTags> = (props) => {
   return (
     <HStack spacing={2} marginTop={props.marginTop}>
@@ -32,12 +32,12 @@ const BlogTags: React.FC<IBlogTags> = (props) => {
   )
 }
 
-const ArticleList = (props: { news: News[] }) => {
+const ArticleList = (props: { news: NewsObj[] }) => {
   const news = props.news
   console.log(news)
   return (
     <div>
-      {news.map((i: News) => (
+      {news.map((i: NewsObj) => (
         <Container maxW={'7xl'} p="12" key={i.id}>
           <Box
             marginTop={{ base: '1', sm: '5' }}
