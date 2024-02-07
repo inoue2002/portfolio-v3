@@ -1,4 +1,4 @@
-import { Box, Spacer, Text } from '@chakra-ui/react'
+import { Box, Heading, Spacer, Table, Tbody, Td, Text, Tr } from '@chakra-ui/react'
 import Activities from './top/Activites'
 import Interests from './top/Interests'
 import Name from './top/Name'
@@ -34,7 +34,7 @@ export default function Top() {
       <div></div>
       <Box style={{ marginTop: '15px' }}>
         <Text fontSize={'2xl'} display={'block'} as="b">
-          2002年生まれ。滋賀県の普通科高校を卒業し、現在関西大学2回生（入学1年後1年間休学）
+          2002年生まれ。滋賀県の普通科高校を卒業し、現在関西大学3回生
         </Text>
         <Spacer />
         <Text fontSize={'2xl'} display={'block'} as="b">
@@ -55,6 +55,41 @@ export default function Top() {
       </Box>
       <Box style={{ marginTop: '20px' }}>
         <WorkHistory />
+      </Box>
+      <Box style={{ marginTop: '20px' }}>
+        <Heading as="h2" size="xl">
+          About
+        </Heading>
+        <Table variant="simple">
+          <Tbody>
+            <Tr>
+              <Td>屋号</Td>
+              <Td>IY Tech</Td>
+            </Tr>
+            <Tr>
+              <Td>事業形態</Td>
+              <Td>個人事業主</Td>
+            </Tr>
+            <Tr>
+              <Td>代表</Td>
+              <Td>井上陽介</Td>
+            </Tr>
+            <Tr>
+              <Td>開業</Td>
+              <Td>2022年5月</Td>
+            </Tr>
+            <Tr>
+              <Td>事業内容</Td>
+              <Td>
+                ITコンサルティング、インターネットに関するアプリケーション開発・運営・企画
+              </Td>
+            </Tr>
+            <Tr>
+              <Td>所在地</Td>
+              <Td>滋賀県大津市 / 大阪府吹田市</Td>
+            </Tr>
+          </Tbody>
+        </Table>
       </Box>
     </Box>
   )

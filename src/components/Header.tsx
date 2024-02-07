@@ -1,8 +1,10 @@
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { Box, Flex, Heading, Stack, useDisclosure } from '@chakra-ui/react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export default function Header() {
+  const router = useRouter()
   const { isOpen, onOpen, onClose } = useDisclosure()
   const handleToggle = () => (isOpen ? onClose() : onOpen())
 
@@ -18,12 +20,17 @@ export default function Header() {
     >
       <Flex align="center" mr={5}>
         <Link href="/">
-          <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-            Youkan.me
+          <Heading
+            as="h1"
+            size="lg"
+            letterSpacing={'tighter'}
+            _hover={{ color: 'gray.900' }}
+            transition="color 1s"
+          >
+            IY-Tech . work
           </Heading>
         </Link>
       </Flex>
-
       <Box display={{ base: 'block', md: 'none' }} onClick={handleToggle}>
         <HamburgerIcon />
       </Box>
@@ -38,13 +45,31 @@ export default function Header() {
         spacing="40px"
         mt={{ base: 4, md: 0 }}
       >
-        <Link href="/" title={'top'}>
-          <Heading fontSize={'2xl'} as="b" display={{ base: 'block' }}>
-            About
+        <Link href="/" passHref>
+          <Heading
+            fontSize={'2xl'}
+            as="b"
+            display={{ base: 'block' }}
+            color={router.pathname === '/' ? 'gray.900' : 'whiteAlpha.900'}
+          >
+            Me
           </Heading>
         </Link>
-        <Link href={'news'} title={'link'}>
-          <Heading fontSize={'2xl'} as="b">
+        <Link href="/services" passHref>
+          <Heading
+            fontSize={'2xl'}
+            as="b"
+            color={router.pathname === '/services' ? 'gray.900' : 'whiteAlpha.900'}
+          >
+            Services
+          </Heading>
+        </Link>
+        <Link href="/news" passHref>
+          <Heading
+            fontSize={'2xl'}
+            as="b"
+            color={router.pathname === '/news' ? 'gray.900' : 'whiteAlpha.900'}
+          >
             News
           </Heading>
         </Link>

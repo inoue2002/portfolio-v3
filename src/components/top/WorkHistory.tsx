@@ -16,12 +16,14 @@ export default function WorkHistory() {
       <Heading as="h3" size="md" marginTop={'5px'}>
         2021/08~2022/12 on株式会社(自社開発・受託開発)
       </Heading>
-
       <Heading as="h3" size="md" marginTop={'5px'}>
         2022/02~ 株式会社OH MY GOD(自社開発)
       </Heading>
       <Heading as="h3" size="md" marginTop={'5px'}>
-        2022/05~ dotstudio株式会社(講師)
+        2022/05~2022/12 dotstudio株式会社(講師)
+      </Heading>
+      <Heading as="h3" size="md" marginTop={'5px'}>
+        2023/05~ 株式会社picon(自社開発)
       </Heading>
     </div>
   )
