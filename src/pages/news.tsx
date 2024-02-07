@@ -8,6 +8,7 @@ export async function getServerSideProps() {
   return { props: { initialNews: data.news } }
 }
 
+// @ts-ignore
 export default function NewsPage({ initialNews }) {
   const [news, setNews] = useState(initialNews)
 
