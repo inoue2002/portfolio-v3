@@ -2,7 +2,7 @@ import News from 'src/components/News'
 import { useState } from 'react'
 
 export async function getServerSideProps() {
-  const apiUrl = process.env.NODE_ENV === 'production' ? 'https://youkan.me/api/news' : 'http://localhost:3000/api/news';
+  const apiUrl = process.env.NODE_ENV === 'production' ? 'https://iy-tech.work/api/news' : 'https://iy-tech.work/api/news';
   const response = await fetch(apiUrl);
   const data = await response.json()
   return { props: { initialNews: data.news } }
