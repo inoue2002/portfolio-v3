@@ -12,7 +12,7 @@ if [[ " ${ALLOWED_USERS[@]} " =~ " ${VERCEL_GIT_COMMIT_AUTHOR_LOGIN} " ]]; then
   echo "✅ - Build can proceed"
   exit 1
 else
-  # それ以外のユーザーが作成したPRの場合、ビルドをキャンセル
+  # 許可されていないユーザーが作成したPRの場合、ビルドをキャンセル
   echo "🛑 - Build cancelled"
-  exit 0;
+  exit 0
 fi
