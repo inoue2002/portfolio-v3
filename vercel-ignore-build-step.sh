@@ -6,7 +6,7 @@ ALLOWED_USER="inoue2002"
 echo "VERCEL_GIT_COMMIT_REF: $VERCEL_GIT_COMMIT_REF"
 echo "VERCEL_GIT_AUTHOR_LOGIN: $VERCEL_GIT_AUTHOR_LOGIN"
 
-if [[ "$VERCEL_GIT_AUTHOR_LOGIN" == "$ALLOWED_USER" ]] ; then
+if [[ "$VERCEL_GIT_COMMIT_AUTHOR_LOGIN" == "$ALLOWED_USER" ]] ; then
   # 特定のユーザーが作成したPRの場合、ビルドを進める
   echo "✅ - Build can proceed"
   exit 1;
