@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 許可されたユーザーのリスト
-ALLOWED_USERS=("user1" "test" "user3")
+ALLOWED_USERS=("user1" "inoue2002" "user3")
 
 echo "VERCEL_GIT_COMMIT_REF: $VERCEL_GIT_COMMIT_REF"
 echo "VERCEL_GIT_COMMIT_AUTHOR_LOGIN: $VERCEL_GIT_COMMIT_AUTHOR_LOGIN"
