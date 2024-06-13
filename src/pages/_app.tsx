@@ -66,7 +66,7 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <link
           rel="preload"
-          href="/fonts/w_OTF_Eb.woff2"
+          href="/fonts/LINESeedJP_OTF_Eb.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"

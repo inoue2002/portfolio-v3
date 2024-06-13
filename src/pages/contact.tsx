@@ -1,6 +1,5 @@
 import { Box, Button } from '@chakra-ui/react'
 
-// @ts-ignore
 export default function ContactPage() {
   return (
     <div
@@ -52,9 +51,6 @@ export default function ContactPage() {
           src="https://docs.google.com/forms/d/e/1FAIpQLScUfiliW6HuYU2DBAsL10V3K6XOzlaG_PSJuGW2vY9tfguXuw/viewform?embedded=true"
           width="640"
           height="1000"
-          frameBorder={0}
-          marginHeight={0}
-          marginWidth={0}
         >
           読み込んでいます…
         </iframe>
