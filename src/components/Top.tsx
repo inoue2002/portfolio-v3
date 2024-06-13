@@ -19,6 +19,14 @@ import SnsIcons from './top/SnsIcons'
 import WorkHistory from './top/WorkHistory'
 import Works from './top/Works'
 
+/**
+ * パフォーマンス改善のために、スタイルをCSSクラスに移動し、useMemoを使用して不要な再レンダリングを防ぎます。
+ * また、アニメーションの時間を短縮します。
+ */
+
+import { useMemo } from 'react'
+import styles from './Section.module.css'
+
 function Section({
   children,
   background,
@@ -29,27 +37,33 @@ function Section({
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
 
+  const sectionStyle = useMemo(() => ({
+    boxSizing: 'border-box' as const,
+    width: '100%',
+    height: '101vh',
+    display: 'flex',
+    justifyContent: 'flex-start',
+    overflow: 'hidden',
+    padding: '50px',
+    background: background,
+  }), [background])
+
+  const spanStyle = useMemo(() => ({
+    display: 'block',
+    transform: isInView ? 'none' : 'translateX(-200px)',
+    opacity: isInView ? 1 : 0,
+    transition: 'all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s',
+  }), [isInView])
+
   return (
     <section
       ref={ref}
-      style={{
-        boxSizing: 'border-box',
-        width: '100%',
-        height: '101vh',
-        display: 'flex',
-        justifyContent: 'flex-start',
-        overflow: 'hidden',
-        padding: '50px',
-        background: background,
-      }}
+      style={sectionStyle}
+      className={styles.section}
     >
       <span
-        style={{
-          display: 'block',
-          transform: isInView ? 'none' : 'translateX(-200px)',
-          opacity: isInView ? 1 : 0,
-          transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
-        }}
+        style={spanStyle}
+        className={styles.span}
       >
         {children}
       </span>
