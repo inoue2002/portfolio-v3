@@ -8,7 +8,7 @@ import {
   Text,
   Tr,
 } from '@chakra-ui/react'
-import { useInView } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import { ReactNode, useRef } from 'react'
@@ -53,7 +53,6 @@ function Section({ children, background }: SectionProps) {
       style={{
         boxSizing: 'border-box',
         width: '100%',
-        // height: '101vh',
         display: 'flex',
         justifyContent: 'flex-start',
         overflow: 'hidden',
@@ -64,9 +63,8 @@ function Section({ children, background }: SectionProps) {
       <span
         style={{
           display: 'block',
-          transform: isInView ? 'none' : 'translateX(-200px)',
           opacity: isInView ? 1 : 0,
-          transition: 'all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s',
+          transition: 'opacity 1.5s ease-in-out',
         }}
       >
         {children}
@@ -97,7 +95,6 @@ export default function Top() {
           <span>ソフトウェア開発のお困りごとを一緒に解決します</span>
         </div>
       </Section>
-
       <Box
         display="flex"
         paddingX={{ sm: 4, md: 8 }}
@@ -275,6 +272,84 @@ export default function Top() {
           </Text>
         </Box>
       </Box>
+
+      <Section background="#f5f5f5">
+        <div
+          className="text-extraBold flex flexDirection"
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '100%',
+            fontSize: 'calc(1rem + 1vw)', // 画面サイズと文字サイズを比例させる
+          }}
+        >
+          <span>LINE API Expert認定</span>
+        </div>
+      </Section>
+      <Box bg="#f5f5f5" padding="2rem">
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          marginBottom="1rem"
+        >
+          <a
+            href="https://developers.line.biz/ja/community/api-experts/jp-yosuke-inoue/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+              <Image
+                src="/images/lae.webp"
+                alt="LINE API Expert"
+                width={250}
+                height={150}
+              />
+            </motion.div>
+          </a>
+        </Box>
+        <Text
+          textAlign="center"
+          fontSize="1rem"
+          lineHeight="1.5"
+          maxWidth="600px"
+          margin="0 auto"
+        >
+          LINEヤフー社よりLINEが提供する各種APIに対する深い理解と高い技術力を持ち、コミュニティに影響力を持つエンジニアの方々を公式に認定し、活動をサポートするプログラム「LINE
+          API Expert」に認定されています。
+        </Text>
+      </Box>
+      {/* <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        background="#f5f5f5"
+        padding="2rem"
+        marginTop="2rem"
+      >
+        <Box textAlign="center">
+          <Text fontSize="1rem" color="#ff4500" fontWeight="bold">
+            ご相談、お見積りの依頼など
+            お気軽にお問い合わせください。
+          </Text>
+          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <a
+              href="/contact"
+              style={{
+                display: 'inline-block',
+                marginTop: '1rem',
+                padding: '0.5rem 1rem',
+                backgroundColor: '#ff4500',
+                color: '#ffffff',
+                borderRadius: '5px',
+                textDecoration: 'none',
+              }}
+            >
+              お問い合わせ
+            </a>
+          </motion.div>
+        </Box>
+      </Box> */}
       <Box
         marginLeft={{ md: '20%', base: '10%' }}
         marginRight={{ md: '20%', base: '10%' }}

@@ -90,28 +90,6 @@ export default function SnsIcons() {
           />
         </a>
       </Box>
-
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <a
-          href="https://developers.line.biz/ja/community/api-experts/jp-yosuke-inoue/"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="line api expert"
-        >
-          <Image
-            src="/images/lae.webp"
-            alt="line api expert icon"
-            width={iconSize}
-            height={iconSize}
-            title="line api expert icon"
-            style={{ objectFit: 'contain' }}
-          />
-        </a>
-      </Box>
     </Flex>
   )
 }
