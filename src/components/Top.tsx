@@ -9,7 +9,7 @@ import {
   Tr,
 } from '@chakra-ui/react'
 import { useInView } from 'framer-motion'
-import { useRef, ReactNode } from 'react'
+import { ReactNode, useRef } from 'react'
 import Activities from './top/Activites'
 import Interests from './top/Interests'
 import Name from './top/Name'
@@ -45,9 +45,9 @@ function Section({ children, background }: SectionProps) {
       <span
         style={{
           display: 'block',
-          transform: 'none',
-          opacity: 1,
-          transition: 'none',
+          transform: isInView ? 'none' : 'translateX(-200px)',
+          opacity: isInView ? 1 : 0,
+          transition: 'all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s',
         }}
       >
         {children}
@@ -88,7 +88,10 @@ export default function Top() {
           </div>
         </div>
       </Section>
-      <Box marginLeft={{ md: '20%', base: '10%' }} marginRight={{ md: '20%' }}>
+      <Box
+        marginLeft={{ md: '20%', base: '10%' }}
+        marginRight={{ md: '20%', base: '10%' }}
+      >
         <Box
           style={{
             display: 'flex',

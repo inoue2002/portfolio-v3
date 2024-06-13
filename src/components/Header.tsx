@@ -59,6 +59,7 @@ export default function Header() {
           <Heading
             fontSize={'2xl'}
             as="b"
+            display={{ base: 'block' }}
             color={router.pathname === '/works' ? 'gray.900' : 'whiteAlpha.900'}
           >
             Works
@@ -68,6 +69,7 @@ export default function Header() {
           <Heading
             fontSize={'2xl'}
             as="b"
+            display={{ base: 'block' }}
             color={router.pathname === '/news' ? 'gray.900' : 'whiteAlpha.900'}
           >
             News
@@ -77,6 +79,7 @@ export default function Header() {
           <Heading
             fontSize={'2xl'}
             as="b"
+            display={{ base: 'block' }}
             color={
               router.pathname === '/contact' ? 'gray.900' : 'whiteAlpha.900'
             }

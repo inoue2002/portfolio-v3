@@ -1,4 +1,5 @@
 import { Box, Button } from '@chakra-ui/react'
+import { Spinner } from '@chakra-ui/react'
 
 export default function ContactPage() {
   return (
@@ -47,25 +48,22 @@ export default function ContactPage() {
           </span>
         </div>
 
-        <div style={{ position: 'relative', width: '640px', height: '1000px' }}>
+        <div style={{ position: 'relative', width: '100%', height: '1000px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <div
             id="loadingMessage"
             style={{
               position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
               textAlign: 'center',
               zIndex: 1,
             }}
           >
-            読み込んでいます…
+            <Spinner />
           </div>
           <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLScUfiliW6HuYU2DBAsL10V3K6XOzlaG_PSJuGW2vY9tfguXuw/viewform?embedded=true"
             width="640"
             height="1000"
-            style={{ position: 'absolute', top: 0, left: 0 }}
+            style={{ position: 'relative' }}
             onLoad={() => {
               const loadingMessage = document.getElementById('loadingMessage');
               if (loadingMessage) {
