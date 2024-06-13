@@ -176,7 +176,7 @@ export default function Top() {
           <Heading as="h2" size="xl">
             About
           </Heading>
-          <Table variant="simple" style={{ marginTop: '40px' }}>
+          <Table variant="simple" style={{ marginTop: '40px', width: '100%', tableLayout: 'fixed' }}>
             <Tbody>
               <Tr>
                 <Td>屋号</Td>
