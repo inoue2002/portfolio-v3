@@ -1,6 +1,5 @@
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import type { AppProps } from 'next/app'
-import Head from 'next/head'
 import Footer from 'src/components/Footer'
 import Header from 'src/components/Header'
 import Seo from 'src/components/Seo'
