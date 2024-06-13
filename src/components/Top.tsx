@@ -74,7 +74,7 @@ export default function Top() {
             alignItems: 'center',
             width: '100%',
             height: '100%',
-            fontSize: '2rem', // 文字サイズを大きく
+            fontSize: 'calc(1rem + 1vw)', // 画面サイズと文字サイズを比例させる
           }}
         >
           <div className="flex flexDirection">
