@@ -19,7 +19,11 @@ export default function Header() {
       color="white"
     >
       <Flex align="center" mr={5}>
-        <Link href="/">
+        <Link href="/"
+        onClick={() =>{
+          onClose()
+        }}
+        >
           <Heading
             as="h1"
             size="lg"
