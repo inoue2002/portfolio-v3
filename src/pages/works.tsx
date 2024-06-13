@@ -32,6 +32,16 @@ export default function NewsPage() {
       tags: ['LINEBot', 'LIFF', '割り勘'],
       url: 'https://tateka.app',
     },
+    {
+      title: '【株式会社BUTAI様】社内向けShopify-OBSの連携システムの開発',
+      id: 4,
+      imageUrl: '/services/butai.webp',
+      date: new Date('2024/6/1'),
+      content:
+        'Shopifyの注文情報をOBS上に自動で反映するシステムを開発しました🛒',
+      tags: ['Shopify', 'OBS'],
+      url: '',
+    },
   ]
 
   // Sort newsData by date in descending order
