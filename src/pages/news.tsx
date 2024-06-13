@@ -16,7 +16,7 @@ export default function NewsPage() {
       title:
         'Panasonicと共同でデザインしたコンセプトがRed Dot Design Award2022に選ばれました',
       id: 1,
-      imageUrl: '/news/kototabi.jpeg',
+      imageUrl: '/news/kototabi.webp',
       date: new Date('2022/11/3'),
       content:
         '2022年4月よりPanasonic内にあるFUTURE LIFE FACTORYと進めていました。旅にもたらす新しい体験と価値を考え、世界三大デザイン賞とも言われる大きな舞台に参加でき、とても良い経験になりました。',
@@ -27,7 +27,7 @@ export default function NewsPage() {
       title:
         '企画で関わったLINEでモザイクアートを作る事例が滋賀県地域情報推進会議「コロナに負けない地域×ICT事例」に選ばれました',
       id: 4,
-      imageUrl: '/news/mosaic.jpg',
+      imageUrl: '/news/mosaic.webp',
       date: new Date('2022/3/5'),
       content:
         '審査員より「滋賀県公式のコロナ対策サイトありきでなく、自分が欲しい情報を見れるサイトを作ったことはシビックテック的であり、素晴らしいと思いました。社会に対する思いや、自らスキルを高めながらさらに挑戦していくという姿勢が、頼もしく感じました。」とコメントをいただきました。',
@@ -37,7 +37,7 @@ export default function NewsPage() {
     {
       title: 'PR Timesで開催されたハッカソンにてチーム賞を受賞しました',
       id: 3,
-      imageUrl: '/news/zimoto.png',
+      imageUrl: '/news/zimoto.webp',
       date: new Date('2023/9'),
       content:
         'テーマが地元ということで、自分の地元の魅力を交換できるようなSNSを作りました。ハッカソンが初めてのメンバーも多かったですが、作りたいものの共有を常に行い、良い雰囲気で開発ができました。私はチームリーダーをしつつ、デザイン、認証周り、APIの繋ぎこみなどロジック周りを担当しました。',

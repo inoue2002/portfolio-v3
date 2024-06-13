@@ -18,7 +18,7 @@ export default function NewsPage() {
     {
       title: '会話分析くん',
       id: 1,
-      imageUrl: '/services/message-checker.png',
+      imageUrl: '/services/message-checker.webp,
       date: new Date('2024/1'),
       content:
         'LINEのトーク履歴を送信するだけで、簡単に分析することができます🔍',
@@ -28,7 +28,7 @@ export default function NewsPage() {
     {
       title: 'レシピ保存くん',
       id: 2,
-      imageUrl: '/services/recipe.png',
+      imageUrl: '/services/recipe.webp',
       date: new Date('2024/2'),
       content: 'お気に入りのレシピを保存して、いつでも見返すことができます📚',
       tags: ['LINEBot'],
@@ -37,7 +37,7 @@ export default function NewsPage() {
     {
       title: 'LINEで簡単割り勘「TATEKA」',
       id: 3,
-      imageUrl: '/services/tateka.jpeg',
+      imageUrl: '/services/tateka.webp',
       date: new Date('2023/1/11'),
       content: 'LINEで簡単に建て替え計算ができるLINEBotです📱',
       tags: ['LINEBot', 'LIFF', '割り勘'],
