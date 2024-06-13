@@ -6,13 +6,6 @@ export default function Document() {
       <Head>
         <link
           rel="preload"
-          href="/fonts/LINESeedJP_OTF_Th.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
           href="/fonts/LINESeedJP_OTF_Rg.woff2"
           as="font"
           type="font/woff2"
@@ -34,13 +27,6 @@ export default function Document() {
         />
         <style>
           {`
-            @font-face {
-              font-family: 'LINESeedJP';
-              src: url('/fonts/LINESeedJP_OTF_Th.woff2') format('woff2');
-              font-weight: 100;
-              font-style: normal;
-              font-display: swap;
-            }
             @font-face {
               font-family: 'LINESeedJP';
               src: url('/fonts/LINESeedJP_OTF_Rg.woff2') format('woff2');
