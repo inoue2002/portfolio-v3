@@ -41,7 +41,7 @@ export default function SnsIcons() {
         title="speakerdeck"
       >
         <Image
-          src="/images/speakerdeck.svg"
+          src="/images/speakerdeck.webp"
           alt="speakerdeck icon"
           width={50}
           height={50}
@@ -56,7 +56,7 @@ export default function SnsIcons() {
         title="cosense"
       >
         <Image
-          src="/images/cosense.svg"
+          src="/images/cosense.webp"
           alt="cosense icon"
           width={50}
           height={50}
