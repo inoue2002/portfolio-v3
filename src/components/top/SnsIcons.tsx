@@ -1,4 +1,5 @@
-import { Flex, Image } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
+import Image from 'next/image'
 
 export default function SnsIcons() {
   return (
@@ -29,7 +30,7 @@ export default function SnsIcons() {
           alt="github icon"
           width={50}
           height={50}
-          title="github"
+          title="github icon"
         />
       </a>
 
@@ -37,14 +38,14 @@ export default function SnsIcons() {
         href="https://speakerdeck.com/inoue2002"
         target="_blank"
         rel="noopener noreferrer"
-        title="speackerdeck"
+        title="speakerdeck"
       >
         <Image
-          src="/images/sepakerdeck.svg"
-          alt="speackeck icon"
+          src="/images/speakerdeck.svg"
+          alt="speakerdeck icon"
           width={50}
           height={50}
-          title="speackerdeck"
+          title="speakerdeck icon"
         />
       </a>
 
@@ -59,7 +60,7 @@ export default function SnsIcons() {
           alt="cosense icon"
           width={50}
           height={50}
-          title="cosense"
+          title="cosense icon"
         />
       </a>
 
@@ -74,7 +75,7 @@ export default function SnsIcons() {
           alt="line api expert icon"
           width={50}
           height={50}
-          title="line api expert"
+          title="line api expert icon"
         />
       </a>
     </Flex>
