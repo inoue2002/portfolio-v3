@@ -9,7 +9,7 @@ import {
   Tr,
 } from '@chakra-ui/react'
 import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, ReactNode } from 'react'
 import Activities from './top/Activites'
 import Interests from './top/Interests'
 import Name from './top/Name'
@@ -19,51 +19,36 @@ import SnsIcons from './top/SnsIcons'
 import WorkHistory from './top/WorkHistory'
 import Works from './top/Works'
 
-/**
- * パフォーマンス改善のために、スタイルをCSSクラスに移動し、useMemoを使用して不要な再レンダリングを防ぎます。
- * また、アニメーションの時間を短縮します。
- */
-
-import { useMemo } from 'react'
-import styles from './Section.module.css'
-
-function Section({
-  children,
-  background,
-}: {
-  children: React.ReactNode
+interface SectionProps {
+  children: ReactNode
   background: string
-}) {
+}
+
+function Section({ children, background }: SectionProps) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
-
-  const sectionStyle = useMemo(() => ({
-    boxSizing: 'border-box' as const,
-    width: '100%',
-    height: '101vh',
-    display: 'flex',
-    justifyContent: 'flex-start',
-    overflow: 'hidden',
-    padding: '50px',
-    background: background,
-  }), [background])
-
-  const spanStyle = useMemo(() => ({
-    display: 'block',
-    transform: isInView ? 'none' : 'translateX(-200px)',
-    opacity: isInView ? 1 : 0,
-    transition: 'all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s',
-  }), [isInView])
 
   return (
     <section
       ref={ref}
-      style={sectionStyle}
-      className={styles.section}
+      style={{
+        boxSizing: 'border-box',
+        width: '100%',
+        height: '101vh',
+        display: 'flex',
+        justifyContent: 'flex-start',
+        overflow: 'hidden',
+        padding: '50px',
+        background: background,
+      }}
     >
       <span
-        style={spanStyle}
-        className={styles.span}
+        style={{
+          display: 'block',
+          transform: isInView ? 'none' : 'translateX(-200px)',
+          opacity: isInView ? 1 : 0,
+          transition: 'all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s',
+        }}
       >
         {children}
       </span>
@@ -103,50 +88,6 @@ export default function Top() {
           </div>
         </div>
       </Section>
-      {/* <Section background="">
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '2rem',
-            textAlign: 'center',
-            color: '#000',
-          }}
-        >
-          <h2 style={{ fontSize: '2rem', fontWeight: 'bold' }}>
-            強み
-          </h2>
-          <ul style={{ listStyleType: 'none', padding: 0 }}>
-            <li style={{ margin: '1rem 0' }}>
-              1人目デザイナーを探してる！
-              <br />
-              MVPプロダクトでデザインを。
-              <span style={{ color: '#ff0000' }}>スタートアップ企業さん</span>。
-            </li>
-            <li style={{ margin: '1rem 0' }}>
-              WEBサービスにてデザインを！
-              <br />
-              パートナーを探している
-              <span style={{ color: '#ff0000' }}>ベンチャー企業さん</span>。
-            </li>
-            <li style={{ margin: '1rem 0' }}>
-              Githubはちょっとコーディング少しして欲しい！
-              <br />
-              デザインやコーディングして欲しい
-              <span style={{ color: '#ff0000' }}>システム会社さん</span>。
-            </li>
-          </ul>
-          <p style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
-            デザイン業務、よしたに担当致します。
-          </p>
-        </div>
-      </Section> */}
-
-      {/* <Section background="#f108a4">when</Section> */}
-      {/* <Section background="#bd19c8">in</Section> */}
-      {/* <Section background="#0077ff">view!</Section> */}
       <Box marginLeft={{ md: '20%', base: '10%' }} marginRight={{ md: '20%' }}>
         <Box
           style={{
