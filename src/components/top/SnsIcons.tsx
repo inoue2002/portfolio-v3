@@ -10,7 +10,7 @@ export default function SnsIcons() {
         title="x"
       >
         <Image
-          src="/images/x.png"
+          src="/images/x.webp"
           alt="x icon"
           width={50}
           height={50}
@@ -25,7 +25,7 @@ export default function SnsIcons() {
         title="github"
       >
         <Image
-          src="/images/github.png"
+          src="/images/github.webp"
           alt="github icon"
           width={50}
           height={50}
@@ -70,7 +70,7 @@ export default function SnsIcons() {
         title="line api expert"
       >
         <Image
-          src="/images/lae.png"
+          src="/images/lae.webp"
           alt="line api expert icon"
           width={50}
           height={50}

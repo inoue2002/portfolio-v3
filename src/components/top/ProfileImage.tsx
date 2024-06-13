@@ -4,7 +4,7 @@ export default function Profile() {
   return (
     <div>
       <Image
-        src="/images/profile.jpg"
+        src="/images/profile.webp"
         alt="profile image "
         boxSize="300px"
         borderRadius="full"
