@@ -4,17 +4,17 @@ export default function SnsIcons() {
   return (
     <Flex gap={5}>
       <a
-        href="https://twitter.com/inoue2002"
+        href="https://x.com/inoue2002"
         target="_blank"
         rel="noopener noreferrer"
-        title="twitter"
+        title="x"
       >
         <Image
-          src="/images/twitter.png"
-          alt="twitter icon"
+          src="/images/x.png"
+          alt="x icon"
           width={50}
           height={50}
-          title="twitter icon"
+          title="x icon"
         />
       </a>
 
@@ -52,19 +52,19 @@ export default function SnsIcons() {
         href="https://scrapbox.io/inoue2002/"
         target="_blank"
         rel="noopener noreferrer"
-        title="scrapbox"
+        title="cosense"
       >
         <Image
-          src="/images/scrapbox.png"
-          alt="scrapbox icon"
+          src="/images/cosense.svg"
+          alt="cosense icon"
           width={50}
           height={50}
-          title="scrapbox"
+          title="cosense"
         />
       </a>
 
       <a
-        href="https://www.line-community.me/ja/apiexpert/detail/60adb082851f7443b473e746"
+        href="https://developers.line.biz/ja/community/api-experts/jp-yosuke-inoue/"
         target="_blank"
         rel="noopener noreferrer"
         title="line api expert"

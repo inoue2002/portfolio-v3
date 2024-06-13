@@ -55,13 +55,13 @@ export default function Header() {
             Me
           </Heading>
         </Link>
-        <Link href="/services" passHref>
+        <Link href="/works" passHref>
           <Heading
             fontSize={'2xl'}
             as="b"
-            color={router.pathname === '/services' ? 'gray.900' : 'whiteAlpha.900'}
+            color={router.pathname === '/works' ? 'gray.900' : 'whiteAlpha.900'}
           >
-            Services
+            Works
           </Heading>
         </Link>
         <Link href="/news" passHref>
@@ -73,8 +73,18 @@ export default function Header() {
             News
           </Heading>
         </Link>
+        <Link href="/contact" passHref>
+          <Heading
+            fontSize={'2xl'}
+            as="b"
+            color={
+              router.pathname === '/contact' ? 'gray.900' : 'whiteAlpha.900'
+            }
+          >
+            Contact
+          </Heading>
+        </Link>
       </Stack>
-
       <Box
         display={{ base: isOpen ? 'block' : 'none', md: 'block' }}
         mt={{ base: 4, md: 0 }}

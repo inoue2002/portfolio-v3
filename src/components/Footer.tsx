@@ -10,7 +10,8 @@ import {
 } from '@chakra-ui/react'
 import { ReactNode } from 'react'
 
-import { FaEnvelope, FaInstagram, FaTwitter } from 'react-icons/fa'
+import { FaEnvelope } from 'react-icons/fa'
+import { FaLine, FaXTwitter } from 'react-icons/fa6'
 
 const SocialButton = ({
   children,
@@ -61,14 +62,14 @@ export default function Footer() {
         align={{ base: 'center', md: 'center' }}
       >
         <Text>
-          © 2022 Yosuke Inoue / <Link href="/policy" textDecoration={'underline'}>プライバシーポリシー</Link>
+          © 2024 Yosuke Inoue /{' '}
+          <Link href="/policy" textDecoration={'underline'}>
+            プライバシーポリシー
+          </Link>
         </Text>
         <Stack direction={'row'} spacing={6}>
-          <SocialButton
-            label={'Twitter'}
-            href={'https://twitter.com/inoue2002'}
-          >
-            <FaTwitter />
+          <SocialButton label={'X'} href={'https://x.com/inoue2002'}>
+            <FaXTwitter />
           </SocialButton>
           <SocialButton
             label={'Mail'}
@@ -76,11 +77,14 @@ export default function Footer() {
           >
             <FaEnvelope />
           </SocialButton>
-          <SocialButton
+          {/* <SocialButton
             label={'Instagram'}
             href={'https://www.instagram.com/yoooookan_/'}
           >
             <FaInstagram />
+          </SocialButton> */}
+          <SocialButton label={'line'} href={'https://lin.ee/MIqkbLL'}>
+            <FaLine />
           </SocialButton>
         </Stack>
       </Container>
