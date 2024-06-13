@@ -52,7 +52,7 @@ function Section({ children, background }: SectionProps) {
       style={{
         boxSizing: 'border-box',
         width: '100%',
-        height: '101vh',
+        // height: '101vh',
         display: 'flex',
         justifyContent: 'flex-start',
         overflow: 'hidden',
