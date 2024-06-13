@@ -67,9 +67,8 @@ export default function Top() {
       </Box>
       <Section background="#ffffff">
         <div
-          className="text-extraBold"
+          className="text-extraBold flex flexDirection"
           style={{
-            display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
             width: '100%',
@@ -77,15 +76,13 @@ export default function Top() {
             fontSize: 'calc(1rem + 1vw)', // 画面サイズと文字サイズを比例させる
           }}
         >
-          <div className="flex flexDirection">
-            <div className="flex">
-              <span style={{ color: 'black' }}>速く</span>
-              <span>、</span>
-              <span style={{ color: 'black' }}>確実に</span>
-              <span>。</span>
-            </div>
-            <span>ソフトウェア開発のお困りごとを一緒に解決します</span>
+          <div className="flex">
+            <span style={{ color: 'black' }}>速く</span>
+            <span>、</span>
+            <span style={{ color: 'black' }}>確実に</span>
+            <span>。</span>
           </div>
+          <span>ソフトウェア開発のお困りごとを一緒に解決します</span>
         </div>
       </Section>
       <Box
