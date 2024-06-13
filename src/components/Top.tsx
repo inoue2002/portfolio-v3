@@ -10,14 +10,32 @@ import {
 } from '@chakra-ui/react'
 import { useInView } from 'framer-motion'
 import { ReactNode, useRef } from 'react'
-import Activities from './top/Activites'
-import Interests from './top/Interests'
-import Name from './top/Name'
-import Profile from './top/ProfileImage'
-import Skils from './top/Skils'
-import SnsIcons from './top/SnsIcons'
-import WorkHistory from './top/WorkHistory'
-import Works from './top/Works'
+import dynamic from 'next/dynamic'
+
+const DynamicActivities = dynamic(() => import('./top/Activites'), {
+  loading: () => <p>Loading...</p>,
+})
+const DynamicInterests = dynamic(() => import('./top/Interests'), {
+  loading: () => <p>Loading...</p>,
+})
+const DynamicName = dynamic(() => import('./top/Name'), {
+  loading: () => <p>Loading...</p>,
+})
+const DynamicProfile = dynamic(() => import('./top/ProfileImage'), {
+  loading: () => <p>Loading...</p>,
+})
+const DynamicSkils = dynamic(() => import('./top/Skils'), {
+  loading: () => <p>Loading...</p>,
+})
+const DynamicSnsIcons = dynamic(() => import('./top/SnsIcons'), {
+  loading: () => <p>Loading...</p>,
+})
+const DynamicWorkHistory = dynamic(() => import('./top/WorkHistory'), {
+  loading: () => <p>Loading...</p>,
+})
+const DynamicWorks = dynamic(() => import('./top/Works'), {
+  loading: () => <p>Loading...</p>,
+})
 
 interface SectionProps {
   children: ReactNode
@@ -121,13 +139,13 @@ export default function Top() {
             // marginTop: '5rem',
           }}
         >
-          <Profile />
+          <DynamicProfile />
         </Box>
         <Box style={{ marginTop: '60px' }}>
-          <SnsIcons />
+          <DynamicSnsIcons />
         </Box>
         <Box style={{ marginTop: '15px' }}>
-          <Name />
+          <DynamicName />
         </Box>
         <div></div>
         <Box style={{ marginTop: '15px' }}>
@@ -140,19 +158,19 @@ export default function Top() {
           </Text>
         </Box>
         <Box style={{ marginTop: '20px' }}>
-          <Activities />
+          <DynamicActivities />
         </Box>
         <Box style={{ marginTop: '20px' }}>
-          <Interests />
+          <DynamicInterests />
         </Box>
         <Box style={{ marginTop: '20px' }}>
-          <Works />
+          <DynamicWorks />
         </Box>
         <Box style={{ marginTop: '20px' }}>
-          <Skils />
+          <DynamicSkils />
         </Box>
         <Box style={{ marginTop: '20px' }}>
-          <WorkHistory />
+          <DynamicWorkHistory />
         </Box>
         <Box style={{ marginTop: '20px' }}>
           <Heading as="h2" size="xl">
