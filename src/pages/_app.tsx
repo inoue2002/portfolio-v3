@@ -79,24 +79,28 @@ export default function App({ Component, pageProps }: AppProps) {
               src: url('/fonts/LINESeedJP_OTF_Th.woff2') format('woff2');
               font-weight: 100;
               font-style: normal;
+              font-display: swap;
             }
             @font-face {
               font-family: 'LINESeedJP';
               src: url('/fonts/LINESeedJP_OTF_Rg.woff2') format('woff2');
               font-weight: 400;
               font-style: normal;
+              font-display: swap;
             }
             @font-face {
               font-family: 'LINESeedJP';
               src: url('/fonts/LINESeedJP_OTF_Bd.woff2') format('woff2');
               font-weight: 700;
               font-style: normal;
+              font-display: swap;
             }
             @font-face {
               font-family: 'LINESeedJP';
               src: url('/fonts/LINESeedJP_OTF_Eb.woff2') format('woff2');
               font-weight: 800;
               font-style: normal;
+              font-display: swap;
             }
           `}
         </style>
