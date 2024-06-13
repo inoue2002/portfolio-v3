@@ -12,13 +12,12 @@ import type { NewsObj } from 'src/types/news'
 //   return { props: { initialNews: data.news } }
 // }
 
-// @ts-ignore
 export default function NewsPage() {
   const newsData: NewsObj[] = [
     {
       title: '会話分析くん',
       id: 1,
-      imageUrl: '/services/message-checker.webp,
+      imageUrl: '/services/message-checker.webp',
       date: new Date('2024/1'),
       content:
         'LINEのトーク履歴を送信するだけで、簡単に分析することができます🔍',
