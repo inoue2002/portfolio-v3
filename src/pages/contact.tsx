@@ -48,13 +48,14 @@ export default function ContactPage() {
           </span>
         </div>
 
-        <div style={{ position: 'relative', width: '100%', height: '1000px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ position: 'relative', width: '100%', height: '1000px', display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
           <div
             id="loadingMessage"
             style={{
               position: 'absolute',
               textAlign: 'center',
               zIndex: 1,
+              top: '20px',
             }}
           >
             <Spinner />
