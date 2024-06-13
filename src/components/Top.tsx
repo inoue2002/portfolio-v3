@@ -45,9 +45,9 @@ function Section({ children, background }: SectionProps) {
       <span
         style={{
           display: 'block',
-          transform: isInView ? 'none' : 'translateX(-200px)',
-          opacity: isInView ? 1 : 0,
-          transition: 'all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s',
+          transform: 'none',
+          opacity: 1,
+          transition: 'none',
         }}
       >
         {children}
