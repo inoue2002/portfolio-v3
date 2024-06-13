@@ -24,7 +24,7 @@ export default function ContactPage() {
           mb={4}
           size="lg"
         >
-          LINEで無料相談
+          LINEでのお問い合わせ
         </Button>
 
         <div
