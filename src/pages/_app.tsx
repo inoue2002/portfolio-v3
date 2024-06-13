@@ -18,16 +18,12 @@ export default function App({ Component, pageProps }: AppProps) {
           body: 'LINESeedJP, sans-serif',
         },
         fontWeights: {
-          thin: 100,
           normal: 400,
           bold: 700,
           extraBold: 800,
         },
         styles: {
           global: {
-            '.text-thin': {
-              fontWeight: 100,
-            },
             '.text-normal': {
               fontWeight: 400,
             },

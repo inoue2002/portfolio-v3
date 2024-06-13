@@ -2,14 +2,6 @@ import { useState } from 'react'
 import News from 'src/components/News'
 import type { NewsObj } from 'src/types/news'
 
-// export async function getServerSideProps() {
-//   const apiUrl = process.env.NODE_ENV === 'production' ? 'https://iy-tech.work/api/news' : 'https://iy-tech.work/api/news';
-//   const response = await fetch(apiUrl);
-//   const data = await response.json()
-//   return { props: { initialNews: data.news } }
-// }
-
-// @ts-ignore
 export default function NewsPage() {
   const newsData: NewsObj[] = [
     {

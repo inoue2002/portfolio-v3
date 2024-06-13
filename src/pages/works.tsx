@@ -2,16 +2,6 @@ import { useState } from 'react'
 import News from 'src/components/News'
 import type { NewsObj } from 'src/types/news'
 
-// export async function getServerSideProps() {
-//   const apiUrl =
-//     process.env.NODE_ENV === 'production'
-//       ? 'https://youkan.me/api/services'
-//       : 'http://localhost:3000/api/services'
-//   const response = await fetch(apiUrl)
-//   const data = await response.json()
-//   return { props: { initialNews: data.news } }
-// }
-
 export default function NewsPage() {
   const newsData: NewsObj[] = [
     {

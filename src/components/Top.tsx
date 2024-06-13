@@ -59,12 +59,6 @@ function Section({ children, background }: SectionProps) {
 export default function Top() {
   return (
     <>
-      <Box>
-        {/* <Text className="text-thin">This is thin text</Text>
-        <Text className="text-normal">This is normal text</Text>
-        <Text className="text-bold">This is bold text</Text>
-        <Text className="text-extraBold">This is extra bold text</Text> */}
-      </Box>
       <Section background="#ffffff">
         <div
           className="text-extraBold flex flexDirection"
