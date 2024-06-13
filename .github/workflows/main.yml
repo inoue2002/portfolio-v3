@@ -12,12 +12,12 @@ jobs:
           node-version: 14.x
       - uses: actions/cache@v2
         with:
-          path: ~/.cache/yarn
-          key: ${{ runner.os }}-yarn-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
-          restore-keys: ${{ runner.os }}-yarn-
+          path: ~/.cache/pnpm
+          key: ${{ runner.os }}-pnpm-${{ hashFiles(format('{0}{1}', github.workspace, '/pnpm-lock.yaml')) }}
+          restore-keys: ${{ runner.os }}-pnpm-
       - name: Install dependencies
-        run: yarn install --frozen-lockfile --prefer-offline
+        run: pnpm install
       - name: Run format
-        run: yarn format
+        run: pnpm format
       - name: Check diff
         run: git diff --exit-code

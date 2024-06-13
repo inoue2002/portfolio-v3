@@ -33,7 +33,7 @@ export default function Activities() {
           href="https://sugokunaritai.dev/"
           target="_blank"
           rel="noopener noreferrer"
-          title='すごくなりたいがくせいぐるーぷ'
+          title="すごくなりたいがくせいぐるーぷ"
         >
           すごくなりたいがくせいぐるーぷ代表
         </a>
