@@ -2,9 +2,10 @@ import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import Footer from 'src/components/Footer'
-import { GATracking } from 'src/components/GaTracking'
 import Header from 'src/components/Header'
 import Seo from 'src/components/Seo'
+
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING_ID
 
@@ -41,7 +42,7 @@ export default function App({ Component, pageProps }: AppProps) {
       })}
     >
       <Seo />
-      <GATracking trackingId={GA_TRACKING_ID} />
+      {GA_TRACKING_ID && <GoogleAnalytics gaId={GA_TRACKING_ID} />}
       <Head>
         <link
           rel="preload"

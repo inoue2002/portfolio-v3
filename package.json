@@ -15,6 +15,7 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@next/third-parties": "14.0.5-canary.59",
     "framer-motion": "^11.2.10",
     "next": "14.2.4",
     "react": "18.3.1",
@@ -26,8 +27,8 @@
     "@types/node": "^20.14.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "18.3.0",
-    "typescript": "^5.4.5",
     "eslint-config-prettier": "^9.1.0",
-    "prettier": "3.3.2"
+    "prettier": "3.3.2",
+    "typescript": "^5.4.5"
   }
 }
