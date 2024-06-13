@@ -9,8 +9,9 @@ import {
   Tr,
 } from '@chakra-ui/react'
 import { useInView } from 'framer-motion'
-import { ReactNode, useRef } from 'react'
 import dynamic from 'next/dynamic'
+import Image from 'next/image'
+import { ReactNode, useRef } from 'react'
 
 const DynamicActivities = dynamic(() => import('./top/Activites'), {
   loading: () => <p>Loading...</p>,
@@ -84,7 +85,6 @@ export default function Top() {
             justifyContent: 'center',
             alignItems: 'center',
             width: '100%',
-            height: '100%',
             fontSize: 'calc(1rem + 1vw)', // 画面サイズと文字サイズを比例させる
           }}
         >
@@ -97,6 +97,184 @@ export default function Top() {
           <span>ソフトウェア開発のお困りごとを一緒に解決します</span>
         </div>
       </Section>
+
+      <Box
+        display="flex"
+        paddingX={{ sm: 4, md: 8 }}
+        flexWrap="wrap"
+        gap={4}
+        justifyContent="center"
+        alignItems="center"
+        width="100%"
+        marginTop="2rem"
+      >
+        <Box
+          textAlign="center"
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          maxWidth="300px"
+          marginBottom="2rem"
+        >
+          <Box
+            width={150}
+            height={150}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <Image
+              src="/images/line.webp"
+              alt="LINEアプリケーションの開発"
+              width={100}
+              height={100}
+            />
+          </Box>
+          <Heading as="h3" size="md" marginTop="1rem">
+            LINEアプリ開発
+          </Heading>
+          <Text marginTop="0.5rem">
+            LINEを活用したアプリケーションの開発では国内トップレベルの知識を保有しています。
+          </Text>
+        </Box>
+        <Box
+          textAlign="center"
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          maxWidth="300px"
+          marginBottom="2rem"
+        >
+          <Box
+            width={150}
+            height={150}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <Image
+              src="/images/web.webp"
+              alt="Webアプリ開発"
+              width={150}
+              height={150}
+            />
+          </Box>
+          <Heading as="h3" size="md" marginTop="1rem">
+            Webアプリ開発
+          </Heading>
+          <Text marginTop="0.5rem">
+            さまざまな用途に対応したWebアプリケーションの開発を行います。
+          </Text>
+        </Box>
+        <Box
+          textAlign="center"
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          maxWidth="300px"
+          marginBottom="2rem"
+        >
+          <Box
+            width={150}
+            height={150}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <Image
+              src="/images/mobile.webp"
+              alt="スマートフォンアプリ開発"
+              width={150}
+              height={150}
+            />
+          </Box>
+          <Heading as="h3" size="md" marginTop="1rem">
+            スマートフォンアプリ開発
+          </Heading>
+          <Text marginTop="0.5rem">
+            iOS/Androidのアプリケーション開発を行います。
+          </Text>
+        </Box>
+      </Box>
+      <Box
+        display="flex"
+        paddingX={{ sm: 4, md: 8 }}
+        flexWrap="wrap"
+        gap={4}
+        justifyContent="center"
+        alignItems="center"
+        width="100%"
+        marginTop="2rem"
+      >
+        <Box
+          textAlign="center"
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          maxWidth="300px"
+          marginBottom="2rem"
+        >
+          <Box
+            width={150}
+            height={150}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <Image
+              src="/images/connect.webp"
+              alt="自動化ソリューション"
+              width={150}
+              height={150}
+            />
+          </Box>
+          <Heading as="h3" size="md" marginTop="1rem">
+            業務効率化
+          </Heading>
+          <Text marginTop="0.5rem">
+            決まった作業の自動化により、効率化とコスト削減を実現します。
+          </Text>
+        </Box>
+        <Box
+          textAlign="center"
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          maxWidth="300px"
+          marginBottom="2rem"
+        >
+          <Box
+            width={150}
+            height={150}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <Image
+              src="/images/ai.webp"
+              alt="AI連携"
+              width={150}
+              height={150}
+            />
+          </Box>
+          <Heading as="h3" size="md" marginTop="1rem">
+            AI連携
+          </Heading>
+          <Text marginTop="0.5rem">
+            AI技術を活用したアプリケーション開発を行います。
+          </Text>
+        </Box>
+      </Box>
       <Box
         marginLeft={{ md: '20%', base: '10%' }}
         marginRight={{ md: '20%', base: '10%' }}
@@ -176,7 +354,10 @@ export default function Top() {
           <Heading as="h2" size="xl">
             About
           </Heading>
-          <Table variant="simple" style={{ marginTop: '40px', width: '100%', tableLayout: 'fixed' }}>
+          <Table
+            variant="simple"
+            style={{ marginTop: '40px', width: '100%', tableLayout: 'fixed' }}
+          >
             <Tbody>
               <Tr>
                 <Td>屋号</Td>
