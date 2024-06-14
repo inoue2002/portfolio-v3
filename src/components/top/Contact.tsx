@@ -1,6 +1,5 @@
 import { Box, Button, Spinner } from '@chakra-ui/react'
-
-export const Contact = () => {
+const Contact = () => {
   return (
     <div
       style={{
@@ -85,3 +84,5 @@ export const Contact = () => {
     </div>
   )
 }
+
+export default Contact

@@ -1,44 +1,16 @@
-import {
-  Box,
-  Heading,
-  Spacer,
-  Table,
-  Tbody,
-  Td,
-  Text,
-  Tr,
-} from '@chakra-ui/react'
+import { Box, Heading, Table, Tbody, Td, Text, Tr } from '@chakra-ui/react'
 import { motion, useInView } from 'framer-motion'
-import dynamic from 'next/dynamic'
 import Image from 'next/image'
-import { ReactNode, useRef } from 'react'
-import { ContactBar } from './ConntactBar'
-import { Contact } from './top/Contact'
+import { ReactNode, Suspense, lazy, useRef } from 'react'
 
-const DynamicActivities = dynamic(() => import('./top/Activites'), {
-  loading: () => <p>Loading...</p>,
-})
-const DynamicInterests = dynamic(() => import('./top/Interests'), {
-  loading: () => <p>Loading...</p>,
-})
-const DynamicName = dynamic(() => import('./top/Name'), {
-  loading: () => <p>Loading...</p>,
-})
-const DynamicProfile = dynamic(() => import('./top/ProfileImage'), {
-  loading: () => <p>Loading...</p>,
-})
-const DynamicSkils = dynamic(() => import('./top/Skils'), {
-  loading: () => <p>Loading...</p>,
-})
-const DynamicSnsIcons = dynamic(() => import('./top/SnsIcons'), {
-  loading: () => <p>Loading...</p>,
-})
-const DynamicWorkHistory = dynamic(() => import('./top/WorkHistory'), {
-  loading: () => <p>Loading...</p>,
-})
-const DynamicWorks = dynamic(() => import('./top/Works'), {
-  loading: () => <p>Loading...</p>,
-})
+const ContactBar = lazy(() => import('./ConntactBar'))
+const Contact = lazy(() => import('./top/Contact'))
+const DynamicActivities = lazy(() => import('./top/Activites'))
+const DynamicProfile = lazy(() => import('./top/ProfileImage'))
+const DynamicSkils = lazy(() => import('./top/Skils'))
+const DynamicSnsIcons = lazy(() => import('./top/SnsIcons'))
+const DynamicWorkHistory = lazy(() => import('./top/WorkHistory'))
+const DynamicWorks = lazy(() => import('./top/Works'))
 
 interface SectionProps {
   children: ReactNode
@@ -321,7 +293,9 @@ export default function Top() {
           API Expert」に認定されています。
         </Text>
       </Box>
-      <ContactBar />
+      <Suspense fallback={<p>Loading...</p>}>
+        <ContactBar />
+      </Suspense>
       <Section background="#f5f5f5">
         <div
           className="text-extraBold flex flexDirection"
@@ -342,7 +316,9 @@ export default function Top() {
           alignItems="center"
           marginBottom={4}
         >
-          <DynamicProfile />
+          <Suspense fallback={<p>Loading...</p>}>
+            <DynamicProfile />
+          </Suspense>
         </Box>
         <Text
           textAlign="center"
@@ -372,51 +348,51 @@ export default function Top() {
             alignItems: 'center',
           }}
         >
-          <DynamicSnsIcons />
+          <Suspense fallback={<p>Loading...</p>}>
+            <DynamicSnsIcons />
+          </Suspense>
         </Box>
         <Box
           style={{ marginTop: '20px' }}
           marginLeft={{ md: '20%', base: '10%' }}
           marginRight={{ md: '20%', base: '10%' }}
         >
-          <DynamicActivities />
+          <Suspense fallback={<p>Loading...</p>}>
+            <DynamicActivities />
+          </Suspense>
         </Box>
         <Box
           style={{ marginTop: '20px' }}
           marginLeft={{ md: '20%', base: '10%' }}
           marginRight={{ md: '20%', base: '10%' }}
         >
-          <DynamicWorks />
+          <Suspense fallback={<p>Loading...</p>}>
+            <DynamicWorks />
+          </Suspense>
         </Box>
         <Box
           style={{ marginTop: '20px' }}
           marginLeft={{ md: '20%', base: '10%' }}
           marginRight={{ md: '20%', base: '10%' }}
         >
-          <DynamicSkils />
+          <Suspense fallback={<p>Loading...</p>}>
+            <DynamicSkils />
+          </Suspense>
         </Box>
         <Box
           style={{ marginTop: '20px' }}
           marginLeft={{ md: '20%', base: '10%' }}
           marginRight={{ md: '20%', base: '10%' }}
         >
-          <DynamicWorkHistory />
+          <Suspense fallback={<p>Loading...</p>}>
+            <DynamicWorkHistory />
+          </Suspense>
         </Box>
       </Box>
       <Box
         marginLeft={{ md: '20%', base: '10%' }}
         marginRight={{ md: '20%', base: '10%' }}
       >
-        <Box style={{ marginTop: '15px' }}>{/* <DynamicName /> */}</Box>
-        <div></div>
-        <Box style={{ marginTop: '15px' }}>
-          <Spacer />
-        </Box>
-
-        {/* <Box style={{ marginTop: '20px' }}>
-          <DynamicInterests />
-        </Box> */}
-
         <Box style={{ marginTop: '20px' }}>
           <Heading as="h2" size="xl">
             About
@@ -462,7 +438,9 @@ export default function Top() {
         <Heading as="h2" size="xl" id="contact">
           Contact
         </Heading>
-        <Contact />
+        <Suspense fallback={<p>Loading...</p>}>
+          <Contact />
+        </Suspense>
       </Box>
     </>
   )
