@@ -1,8 +1,8 @@
-import { Box, Button, Text, Flex } from '@chakra-ui/react'
-import { useRouter } from 'next/router'
+import { Box, Button, Flex, Text } from '@chakra-ui/react'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
-export const ContactBar: React.FC = () => {
+const ContactBar: React.FC = () => {
   const router = useRouter()
 
   const handleContactClick = () => {
@@ -11,7 +11,7 @@ export const ContactBar: React.FC = () => {
 
   return (
     <Box width={'100%'} textAlign="center" paddingY={10}>
-      <Text fontSize="lg" className='text-bold' marginBottom="1rem">
+      <Text fontSize="lg" className="text-bold" marginBottom="1rem">
         ご相談・お見積もり お気軽にお問い合わせください
       </Text>
       <Button colorScheme="teal" onClick={handleContactClick}>
@@ -30,3 +30,5 @@ export const ContactBar: React.FC = () => {
     </Box>
   )
 }
+
+export default ContactBar
