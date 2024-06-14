@@ -12,6 +12,8 @@ import { motion, useInView } from 'framer-motion'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import { ReactNode, useRef } from 'react'
+import { ContactBar } from './ConntactBar'
+import { Contact } from './top/Contact'
 
 const DynamicActivities = dynamic(() => import('./top/Activites'), {
   loading: () => <p>Loading...</p>,
@@ -286,12 +288,12 @@ export default function Top() {
           <span>LINE API Expert認定</span>
         </div>
       </Section>
-      <Box bg="#f5f5f5" padding="2rem">
+      <Box bg="#f5f5f5" paddingX={20} paddingBottom={20}>
         <Box
           display="flex"
           justifyContent="center"
           alignItems="center"
-          marginBottom="1rem"
+          marginBottom="2rem"
         >
           <a
             href="https://developers.line.biz/ja/community/api-experts/jp-yosuke-inoue/"
@@ -319,112 +321,102 @@ export default function Top() {
           API Expert」に認定されています。
         </Text>
       </Box>
-      {/* <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        background="#f5f5f5"
-        padding="2rem"
-        marginTop="2rem"
-      >
-        <Box textAlign="center">
-          <Text fontSize="1rem" color="#ff4500" fontWeight="bold">
-            ご相談、お見積りの依頼など
-            お気軽にお問い合わせください。
-          </Text>
-          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a
-              href="/contact"
-              style={{
-                display: 'inline-block',
-                marginTop: '1rem',
-                padding: '0.5rem 1rem',
-                backgroundColor: '#ff4500',
-                color: '#ffffff',
-                borderRadius: '5px',
-                textDecoration: 'none',
-              }}
-            >
-              お問い合わせ
-            </a>
-          </motion.div>
+      <ContactBar />
+      <Section background="#f5f5f5">
+        <div
+          className="text-extraBold flex flexDirection"
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '100%',
+            fontSize: 'calc(1rem + 1vw)', // 画面サイズと文字サイズを比例させる
+          }}
+        >
+          <span>プロフィール</span>
+        </div>
+      </Section>
+      <Box bg="#f5f5f5" padding={5}>
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          marginBottom={4}
+        >
+          <DynamicProfile />
         </Box>
-      </Box> */}
+        <Text
+          textAlign="center"
+          fontSize="1.2rem"
+          fontWeight="bold"
+          marginBottom={2}
+        >
+          代表 井上陽介（ようかん）
+        </Text>
+        <Text
+          textAlign="center"
+          fontSize="1rem"
+          lineHeight="1.5"
+          maxWidth="600px"
+          margin="0 auto"
+        >
+          2002年生まれ。滋賀県の普通科高校を卒業し、現在関西大学3回生。
+          2022年より個人事業主として活動を開始し、スタートアップを中心にさまざまなサービス開発に従事。
+          抽象度の高い課題に対しても、素早くプロトタイプを作ることが特に得意。
+          趣味は旅と料理。最近は寿司握りに挑戦中。
+        </Text>
+        <Box
+          style={{
+            marginTop: '60px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <DynamicSnsIcons />
+        </Box>
+        <Box
+          style={{ marginTop: '20px' }}
+          marginLeft={{ md: '20%', base: '10%' }}
+          marginRight={{ md: '20%', base: '10%' }}
+        >
+          <DynamicActivities />
+        </Box>
+        <Box
+          style={{ marginTop: '20px' }}
+          marginLeft={{ md: '20%', base: '10%' }}
+          marginRight={{ md: '20%', base: '10%' }}
+        >
+          <DynamicWorks />
+        </Box>
+        <Box
+          style={{ marginTop: '20px' }}
+          marginLeft={{ md: '20%', base: '10%' }}
+          marginRight={{ md: '20%', base: '10%' }}
+        >
+          <DynamicSkils />
+        </Box>
+        <Box
+          style={{ marginTop: '20px' }}
+          marginLeft={{ md: '20%', base: '10%' }}
+          marginRight={{ md: '20%', base: '10%' }}
+        >
+          <DynamicWorkHistory />
+        </Box>
+      </Box>
       <Box
         marginLeft={{ md: '20%', base: '10%' }}
         marginRight={{ md: '20%', base: '10%' }}
       >
-        <Box
-          style={{
-            display: 'flex',
-            width: '100%',
-            alignItems: 'center',
-            justifyContent: 'center',
-            marginTop: '2rem',
-            flexDirection: 'column',
-          }}
-        >
-          {/* <Heading
-            as="h1"
-            size="2xl"
-            textAlign="center"
-            fontFamily="Inter, sans-serif"
-            fontWeight="bold"
-          >
-            どうせやるなら面白く
-          </Heading> */}
-          {/* <Text
-            fontSize="xl"
-            textAlign="center"
-            marginTop="1rem"
-            fontFamily="Inter, sans-serif"
-            fontStyle="italic"
-          >
-            ソフトウェア開発を通じて、さまざまなサービスを作っています
-          </Text> */}
-        </Box>
-        <Box
-          style={{
-            display: 'flex',
-            width: '100%',
-            alignItems: 'center',
-            justifyContent: 'center',
-            // marginTop: '5rem',
-          }}
-        >
-          <DynamicProfile />
-        </Box>
-        <Box style={{ marginTop: '60px' }}>
-          <DynamicSnsIcons />
-        </Box>
-        <Box style={{ marginTop: '15px' }}>
-          <DynamicName />
-        </Box>
+        <Box style={{ marginTop: '15px' }}>{/* <DynamicName /> */}</Box>
         <div></div>
         <Box style={{ marginTop: '15px' }}>
-          <Text fontSize={'2xl'} display={'block'} as="b">
-            2002年生まれ。滋賀県の普通科高校を卒業し、現在関西大学3回生
-          </Text>
           <Spacer />
-          <Text fontSize={'2xl'} display={'block'} as="b">
-            複数のスタートアップでエンジニアとして開発に携わり、toB/toC/toGの大小さまざまな開発に従事
-          </Text>
         </Box>
-        <Box style={{ marginTop: '20px' }}>
-          <DynamicActivities />
-        </Box>
-        <Box style={{ marginTop: '20px' }}>
+
+        {/* <Box style={{ marginTop: '20px' }}>
           <DynamicInterests />
-        </Box>
-        <Box style={{ marginTop: '20px' }}>
-          <DynamicWorks />
-        </Box>
-        <Box style={{ marginTop: '20px' }}>
-          <DynamicSkils />
-        </Box>
-        <Box style={{ marginTop: '20px' }}>
-          <DynamicWorkHistory />
-        </Box>
+        </Box> */}
+
         <Box style={{ marginTop: '20px' }}>
           <Heading as="h2" size="xl">
             About
@@ -461,6 +453,16 @@ export default function Top() {
             </Tbody>
           </Table>
         </Box>
+      </Box>
+      <Box
+        marginTop={'20px'}
+        marginLeft={{ md: '20%', base: '10%' }}
+        marginRight={{ md: '20%', base: '10%' }}
+      >
+        <Heading as="h2" size="xl" id="contact">
+          Contact
+        </Heading>
+        <Contact />
       </Box>
     </>
   )

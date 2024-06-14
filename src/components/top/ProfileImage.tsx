@@ -28,7 +28,7 @@ export default function Profile() {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onMouseMove={handleMouseMove}
-      style={{ position: 'relative', width: '300px', height: '300px' }}
+      style={{ position: 'relative', width: '200px', height: '200px' }}
     >
       <motion.div
         initial={{ opacity: 1 }}

@@ -79,13 +79,13 @@ export default function Header() {
             News
           </Heading>
         </Link>
-        <Link href="/contact" passHref>
+        <Link href="/#contact" passHref>
           <Heading
             fontSize={'2xl'}
             as="b"
             display={{ base: 'block' }}
             color={
-              router.pathname === '/contact' ? 'gray.900' : 'whiteAlpha.900'
+              router.pathname === '/#contact' ? 'gray.900' : 'whiteAlpha.900'
             }
           >
             Contact

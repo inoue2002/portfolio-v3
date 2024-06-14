@@ -1,7 +1,6 @@
-import { Box, Button } from '@chakra-ui/react'
-import { Spinner } from '@chakra-ui/react'
+import { Box, Button, Spinner } from '@chakra-ui/react'
 
-export default function ContactPage() {
+export const Contact = () => {
   return (
     <div
       style={{
@@ -48,7 +47,16 @@ export default function ContactPage() {
           </span>
         </div>
 
-        <div style={{ position: 'relative', width: '100%', height: '1000px', display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
+        <div
+          style={{
+            position: 'relative',
+            width: '100%',
+            height: '1000px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'flex-start',
+          }}
+        >
           <div
             id="loadingMessage"
             style={{
@@ -66,9 +74,9 @@ export default function ContactPage() {
             height="1000"
             style={{ position: 'relative' }}
             onLoad={() => {
-              const loadingMessage = document.getElementById('loadingMessage');
+              const loadingMessage = document.getElementById('loadingMessage')
               if (loadingMessage) {
-                loadingMessage.style.display = 'none';
+                loadingMessage.style.display = 'none'
               }
             }}
           ></iframe>
