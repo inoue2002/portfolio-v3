@@ -3,6 +3,7 @@ import { ReactNode, useRef } from 'react'
 
 const Section = ({ children, background }: SectionProps) => {
   const ref = useRef(null)
+  // @ts-ignore
   const isInView = useInView(ref, { triggerOnce: true })
 
   return (

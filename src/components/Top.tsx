@@ -1,7 +1,7 @@
-import { Box, Heading, Table, Tbody, Td, Text, Tr } from '@chakra-ui/react'
-import { motion, useInView } from 'framer-motion'
+import { Box, Heading, Text } from '@chakra-ui/react'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { ReactNode, Suspense, lazy, useRef } from 'react'
+import { Suspense, lazy } from 'react'
 
 // Lazy load the components
 const ContactBar = lazy(() => import('./ConntactBar'))
