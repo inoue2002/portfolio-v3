@@ -18,9 +18,9 @@ const Seo: VFC<MetaData> = ({
   pageImgWidth,
   pageImgHeight,
 }) => {
-  const defaultTitle = '井上陽介（ようかん）のポートフォリオ | Engineer Eventer'
+  const defaultTitle = 'IY Tech | ポートフォリオ'
   const defaultDescription =
-    '井上陽介のポートフォリオです。2002年生まれ。滋賀県の普通科高校を卒業し、現在関西大学2回生（入学1年後1年間休学）得意なソフトウェア領域を応用し、いかに新しい価値を生み出せるかを考えています。最近興味があるのはコミュニティ運営・空き家活用などです。'
+    'IY Techでは、インターネットに関するアプリケーション開発・運営・企画を行い、さまざまな業界のシステム開発に携わっています。特にLINEアプリ開発に強みを持ち、LINE公式アカウントの開発やLINE APIを利用したサービス開発を得意としています。'
 
   const title = pageTitle ? `${pageTitle} | ${defaultTitle}` : defaultTitle
   const description = pageDescription ? pageDescription : defaultDescription
