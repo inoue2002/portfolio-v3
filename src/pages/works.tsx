@@ -42,6 +42,15 @@ export default function NewsPage() {
       tags: ['Shopify', 'OBS'],
       url: '',
     },
+    {
+      title: 'LINEでフォトコンテストを開催できる「Lコンテスト」',
+      id: 5,
+      imageUrl: '/services/lcontest.webp',
+      date: new Date('2024/6/24'),
+      content: '誰でもLINEでフォトコンテストを開催できるサービスです📸',
+      tags: ['LINEBot', 'LIFF', 'フォトコンテスト'],
+      url: 'https://contest.iy-tech.work/',
+    },
   ]
 
   // Sort newsData by date in descending order
