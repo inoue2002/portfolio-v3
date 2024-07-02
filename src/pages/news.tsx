@@ -36,6 +36,17 @@ export default function NewsPage() {
       tags: ['プログラミング', 'ハッカソン'],
       url: 'https://github.com/prtimes-team2',
     },
+    {
+      title:
+        '大阪産業局/ソフト産業プラザ TEQSで開催されたAIビジネス研究会でハンズオン講師をさせていただきました。',
+      id: 2,
+      date: new Date('2024/7/2'),
+      content:
+        'ノーコードツールMakeとGPT-4oを連携し、画像の内容を理解できるLINEBotのセミナーを行いました。また、LINEとAIを用いたビジネス事例の紹介などを行いました。',
+      tags: ['AI', 'LINE', 'セミナー'],
+      imageUrl: '/news/ai-ken.webp',
+      url: 'https://scrapbox.io/inoue2002/Make%E3%81%A8LINE%E3%81%A7%E4%BD%9C%E3%82%8BAI*LINEBot%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9_-_%E3%83%8F%E3%83%B3%E3%82%BA%E3%82%AA%E3%83%B3%E8%B3%87%E6%96%99',
+    },
   ]
 
   // Sort newsData by date in descending order
