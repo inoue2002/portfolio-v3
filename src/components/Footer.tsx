@@ -62,7 +62,7 @@ export default function Footer() {
         align={{ base: 'center', md: 'center' }}
       >
         <Text>
-          © 2024 Yosuke Inoue /{' '}
+          © {new Date().getFullYear()} Yosuke Inoue /{' '}
           <Link href="/policy" textDecoration={'underline'}>
             プライバシーポリシー
           </Link>
