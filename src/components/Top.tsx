@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { Suspense, lazy } from 'react'
 
 // Lazy load the components
-const ContactBar = lazy(() => import('./ConntactBar'))
+const ContactBar = lazy(() => import('./ContactBar'))
 const Contact = lazy(() => import('./top/Contact'))
 const DynamicActivities = lazy(() => import('./top/Activites'))
 const DynamicProfile = lazy(() => import('./top/ProfileImage'))
