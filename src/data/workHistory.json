@@ -1,0 +1,46 @@
+[
+  {
+    "company": "GONENGOLLC",
+    "period": "2020/03~",
+    "description": "受託開発・小学生向けプログラミング教育事業"
+  },
+  {
+    "company": "株式会社Civichat",
+    "period": "2021/05~2021/12",
+    "description": "自社開発"
+  },
+  {
+    "company": "on株式会社",
+    "period": "2021/08~2022/12",
+    "description": "自社開発・受託開発"
+  },
+  {
+    "company": "株式会社OH MY GOD",
+    "period": "2022/02~",
+    "description": "自社開発"
+  },
+  {
+    "company": "dotstudio株式会社",
+    "period": "2022/05~2022/12",
+    "description": "講師"
+  },
+  {
+    "company": "株式会社picon",
+    "period": "2023/05~2024/04",
+    "description": "自社開発"
+  },{
+    "company":"株式会社ナレッジワーク",
+    "period":"2024/09",
+    "description":"インターン"
+  },
+  {
+    "company":"株式会社LayerX",
+    "period":"2024/10",
+    "description":"インターン"
+  },
+  {
+    "company":"株式会社YOSHINANI",
+    "period":"2024/11~",
+    "description":"受託開発"
+  }
+]
