@@ -1,8 +1,44 @@
 import { useState } from 'react'
 import News from 'src/components/News'
+import Seo from 'src/components/Seo'
 import type { NewsObj } from 'src/types/news'
 
 export default function NewsPage() {
+  // ニュースページ用の構造化データ
+  const newsStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    headline: 'IY Tech ニュース',
+    description: 'IY Techの活動やプロジェクトに関する最新情報をお届けします。',
+    author: {
+      '@type': 'Person',
+      name: '井上陽介',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'IY Tech',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://youkan.me/news/portfolio.webp',
+      },
+    },
+    blogPost: [
+      {
+        '@type': 'BlogPosting',
+        headline: 'Panasonicと共同でデザインしたコンセプトがRed Dot Design Award2022に選ばれました',
+        datePublished: '2022-11-03',
+        image: 'https://youkan.me/news/kototabi.webp',
+        url: 'https://www.red-dot.org/project/kototabi-60169',
+      },
+      {
+        '@type': 'BlogPosting',
+        headline: 'PR Timesで開催されたハッカソンにてチーム賞を受賞しました',
+        datePublished: '2023-09-01',
+        image: 'https://youkan.me/news/zimoto.webp',
+        url: 'https://github.com/prtimes-team2',
+      },
+    ],
+  }
   const newsData: NewsObj[] = [
     {
       title:
@@ -54,5 +90,16 @@ export default function NewsPage() {
 
   const [news, setNews] = useState(newsData)
 
-  return <div>{news ? <News news={news} /> : ''}</div>
+  return (
+    <div>
+      <Seo 
+        pageTitle="ニュース"
+        pageDescription="IY Techの活動やプロジェクトに関する最新情報をお届けします。受賞歴やイベント参加など、さまざまな活動をご紹介します。"
+        pageKeywords={['ニュース', '受賞歴', 'イベント', 'セミナー']}
+        pageType="article"
+        structuredData={newsStructuredData}
+      />
+      {news ? <News news={news} /> : ''}
+    </div>
+  )
 }

@@ -1,8 +1,58 @@
 import { useState } from 'react'
 import News from 'src/components/News'
+import Seo from 'src/components/Seo'
 import type { NewsObj } from 'src/types/news'
 
 export default function ServicesPage() {
+  // サービスページ用の構造化データ
+  const servicesStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        item: {
+          '@type': 'Service',
+          name: '会話分析くん',
+          description: 'LINEのトーク履歴を送信するだけで、簡単に分析することができます🔍',
+          url: 'https://line-checker.vercel.app',
+          provider: {
+            '@type': 'Organization',
+            name: 'IY Tech',
+          },
+        },
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        item: {
+          '@type': 'Service',
+          name: 'レシピ保存くん',
+          description: 'お気に入りのレシピを保存して、いつでも見返すことができます📚',
+          url: 'https://recipe-bookmark.vercel.app',
+          provider: {
+            '@type': 'Organization',
+            name: 'IY Tech',
+          },
+        },
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        item: {
+          '@type': 'Service',
+          name: 'LINEで簡単割り勘「TATEKA」',
+          description: 'LINEで簡単に建て替え計算ができるLINEBotです📱',
+          url: 'https://tateka.app',
+          provider: {
+            '@type': 'Organization',
+            name: 'IY Tech',
+          },
+        },
+      },
+    ],
+  }
   const servicesData: NewsObj[] = [
     {
       title: '会話分析くん',
@@ -58,5 +108,16 @@ export default function ServicesPage() {
 
   const [services, setServices] = useState(servicesData)
 
-  return <div>{services ? <News news={services} /> : ''}</div>
+  return (
+    <div>
+      <Seo 
+        pageTitle="サービス一覧"
+        pageDescription="IY Techが提供するLINEアプリ開発、Webアプリ開発、モバイルアプリ開発などのサービス一覧です。"
+        pageKeywords={['LINEBot', 'Webアプリ', 'サービス開発', 'LIFF']}
+        pageType="article"
+        structuredData={servicesStructuredData}
+      />
+      {services ? <News news={services} /> : ''}
+    </div>
+  )
 }
