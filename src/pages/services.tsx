@@ -2,8 +2,8 @@ import { useState } from 'react'
 import News from 'src/components/News'
 import type { NewsObj } from 'src/types/news'
 
-export default function NewsPage() {
-  const newsData: NewsObj[] = [
+export default function ServicesPage() {
+  const servicesData: NewsObj[] = [
     {
       title: '会話分析くん',
       id: 1,
@@ -53,10 +53,10 @@ export default function NewsPage() {
     },
   ]
 
-  // Sort newsData by date in descending order
-  newsData.sort((a, b) => b.date.getTime() - a.date.getTime())
+  // Sort servicesData by date in descending order
+  servicesData.sort((a, b) => b.date.getTime() - a.date.getTime())
 
-  const [services, setServices] = useState(newsData)
+  const [services, setServices] = useState(servicesData)
 
   return <div>{services ? <News news={services} /> : ''}</div>
 }

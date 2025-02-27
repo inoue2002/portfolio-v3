@@ -59,14 +59,14 @@ export default function Header() {
             Me
           </Heading>
         </Link>
-        <Link href="/works" passHref>
+        <Link href="/services" passHref>
           <Heading
             fontSize={'2xl'}
             as="b"
             display={{ base: 'block' }}
-            color={router.pathname === '/works' ? 'gray.900' : 'whiteAlpha.900'}
+            color={router.pathname === '/services' ? 'gray.900' : 'whiteAlpha.900'}
           >
-            Works
+            Services
           </Heading>
         </Link>
         <Link href="/news" passHref>
