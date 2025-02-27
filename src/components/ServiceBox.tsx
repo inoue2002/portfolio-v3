@@ -29,6 +29,9 @@ const ServiceBox = ({
       alignItems="center"
       maxWidth="300px"
       marginBottom="2rem"
+      role="group"
+      aria-label={`${title}サービス`}
+      tabIndex={0}
     >
       <Box
         width={150}
@@ -48,10 +51,10 @@ const ServiceBox = ({
           loading="lazy"
         />
       </Box>
-      <Heading as="h3" size="md" marginTop="1rem">
+      <Heading as="h3" size="md" marginTop="1rem" id={`service-${title}`}>
         {title}
       </Heading>
-      <Text marginTop="0.5rem">{description}</Text>
+      <Text marginTop="0.5rem" aria-labelledby={`service-${title}`}>{description}</Text>
     </Box>
   )
 }

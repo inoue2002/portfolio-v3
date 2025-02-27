@@ -91,8 +91,14 @@ const ArticleList = (props: { news: NewsObj[] }) => {
               marginTop={{ base: '3', sm: '0' }}
             >
               <BlogTags tags={i.tags} />
-              <Heading marginTop="1">
-                <a href={i.url} target="_blank" rel="noopener noreferrer">
+              <Heading marginTop="1" id={`news-title-${i.id}`}>
+                <a 
+                  href={i.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-describedby={`news-content-${i.id}`}
+                  tabIndex={0}
+                >
                   {i.title}
                 </a>
               </Heading>
@@ -101,6 +107,8 @@ const ArticleList = (props: { news: NewsObj[] }) => {
                 marginTop="2"
                 color={useColorModeValue('gray.700', 'gray.200')}
                 fontSize="lg"
+                id={`news-content-${i.id}`}
+                aria-labelledby={`news-title-${i.id}`}
               >
                 {i.content}
               </Text>
