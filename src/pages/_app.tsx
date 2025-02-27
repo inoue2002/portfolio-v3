@@ -46,6 +46,7 @@ export default function App({ Component, pageProps }: AppProps) {
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
+          fetchPriority="high"
         />
         <link
           rel="preload"
@@ -53,6 +54,7 @@ export default function App({ Component, pageProps }: AppProps) {
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
+          fetchPriority="high"
         />
         <link
           rel="preload"
@@ -60,6 +62,7 @@ export default function App({ Component, pageProps }: AppProps) {
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
+          fetchPriority="high"
         />
         <style>
           {`

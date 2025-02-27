@@ -3,8 +3,12 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { Suspense, lazy } from 'react'
 
-// Lazy load the components
-const ContactBar = lazy(() => import('./ContactBar'))
+// Import critical components directly
+import Section from './Section'
+import ServiceBox from './ServiceBox'
+import ContactBar from './ContactBar'
+
+// Lazy load non-critical components
 const Contact = lazy(() => import('./top/Contact'))
 const DynamicActivities = lazy(() => import('./top/Activites'))
 const DynamicProfile = lazy(() => import('./top/ProfileImage'))
@@ -12,14 +16,6 @@ const DynamicSkils = lazy(() => import('./top/Skils'))
 const DynamicSnsIcons = lazy(() => import('./top/SnsIcons'))
 const DynamicWorkHistory = lazy(() => import('./top/WorkHistory'))
 const DynamicWorks = lazy(() => import('./top/Works'))
-
-// Section component
-const Section = lazy(() => import('./Section'))
-
-// ServiceBox component
-const ServiceBox = lazy(() => import('./ServiceBox'))
-
-// AboutTable component
 const AboutTable = lazy(() => import('./AboutTable'))
 
 export default function Top() {
@@ -142,6 +138,8 @@ export default function Top() {
                 alt="LINE API Expert"
                 width={250}
                 height={150}
+                priority
+                sizes="(max-width: 768px) 100vw, 250px"
               />
             </motion.div>
           </a>

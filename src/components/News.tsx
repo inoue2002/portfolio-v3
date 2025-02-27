@@ -62,8 +62,12 @@ const ArticleList = (props: { news: NewsObj[] }) => {
                   <Image
                     borderRadius="lg"
                     src={i.imageUrl}
-                    alt="some good alt text"
+                    alt={i.title}
                     objectFit="contain"
+                    width={600}
+                    height={400}
+                    sizes="(max-width: 768px) 100vw, 600px"
+                    loading="lazy"
                   />
                 </Link>
               </Box>

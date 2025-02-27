@@ -39,7 +39,14 @@ const ServiceBox = ({
           justifyContent: 'center',
         }}
       >
-        <Image src={src} alt={alt} width={150} height={150} />
+        <Image 
+          src={src} 
+          alt={alt} 
+          width={150} 
+          height={150}
+          sizes="150px"
+          loading="lazy"
+        />
       </Box>
       <Heading as="h3" size="md" marginTop="1rem">
         {title}
