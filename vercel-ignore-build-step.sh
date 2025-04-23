@@ -8,7 +8,7 @@ echo "VERCEL_GIT_COMMIT_AUTHOR_LOGIN: $VERCEL_GIT_COMMIT_AUTHOR_LOGIN"
 
 if [[ "$VERCEL_GIT_COMMIT_AUTHOR_LOGIN" == "$ALLOWED_USER" ]] ; then
   # 特定のユーザーが作成したPRの場合、ビルドを進める
-  echo "✅ - Build can proceed"
+  echo "✅ - Build can proceed!"
   exit 1;
 else
   # それ以外のユーザーが作成したPRの場合、ビルドをキャンセル
