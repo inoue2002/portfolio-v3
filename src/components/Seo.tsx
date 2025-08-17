@@ -54,11 +54,12 @@ const Seo: FC<MetaData> = ({
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer service',
-      email: 'inoueyousuke.contact@gmail.com',
+      email: 'inoueyosuke2002@gmail.com',
     },
     sameAs: [
       'https://github.com/inoue2002',
       'https://twitter.com/inoue2002',
+      'https://x.com/inoue2002',
     ],
   }
 

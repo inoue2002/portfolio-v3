@@ -17,7 +17,7 @@ export default function Home() {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer service',
-      email: 'inoueyousuke.contact@gmail.com',
+      email: 'inoueyosuke2002@gmail.com',
     },
     sameAs: [
       'https://github.com/inoue2002',
