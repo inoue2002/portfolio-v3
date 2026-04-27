@@ -4,13 +4,13 @@ import workHistory from '../../data/workHistory.json'
 export default function WorkHistory() {
   return (
     <div>
-      <Heading as="h2" size="xl">
+      <Heading as="h2" size="3xl">
         Work History
       </Heading>
       <Spacer marginTop={'10px'} />
       {workHistory.map((item, index) => (
         <div key={index} style={{ marginTop: '5px' }}>
-          <Heading as="h3" size="md">
+          <Heading as="h3" size="lg">
             {item.company}
           </Heading>
           <Text color="gray.500">

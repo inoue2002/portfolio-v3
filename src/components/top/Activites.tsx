@@ -3,11 +3,11 @@ import { Heading, Spacer } from '@chakra-ui/react'
 export default function Activities() {
   return (
     <div>
-      <Heading as="h2" size="xl">
+      <Heading as="h2" size="3xl">
         Activities
       </Heading>
       <Spacer marginTop={'10px'} />
-      <Heading as="u" size="md" marginTop={'5px'}>
+      <Heading as="u" size="lg" marginTop={'5px'}>
         <a
           href="https://www.line-community.me/ja/apiexpert/detail/60adb082851f7443b473e746"
           target="_blank"
@@ -18,7 +18,7 @@ export default function Activities() {
         </a>
       </Heading>
       <Spacer />
-      <Heading as="u" size="md" marginTop={'5px'}>
+      <Heading as="u" size="lg" marginTop={'5px'}>
         <a
           href="https://critica.uno/"
           target="_blank"
@@ -28,7 +28,7 @@ export default function Activities() {
         </a>
       </Heading>
       <Spacer />
-      <Heading as="u" size="md" marginTop={'5px'}>
+      <Heading as="u" size="lg" marginTop={'5px'}>
         <a
           href="https://sugokunaritai.dev/"
           target="_blank"

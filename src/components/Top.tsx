@@ -1,5 +1,5 @@
 import { Box, Heading, Text } from '@chakra-ui/react'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 import Image from 'next/image'
 import { Suspense, lazy } from 'react'
 
@@ -17,6 +17,15 @@ const DynamicSnsIcons = lazy(() => import('./top/SnsIcons'))
 const DynamicWorkHistory = lazy(() => import('./top/WorkHistory'))
 const DynamicWorks = lazy(() => import('./top/Works'))
 const AboutTable = lazy(() => import('./AboutTable'))
+
+const BIRTH_DATE = new Date('2002-04-12')
+const calcAge = (birth: Date, today = new Date()): number => {
+  let age = today.getFullYear() - birth.getFullYear()
+  const m = today.getMonth() - birth.getMonth()
+  if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) age--
+  return age
+}
+const age = calcAge(BIRTH_DATE)
 
 export default function Top() {
   return (
@@ -199,7 +208,7 @@ export default function Top() {
           maxWidth="600px"
           margin="10px auto"
         >
-          2002年生まれ。滋賀県の普通科高校を卒業し、現在関西大学4回生。
+          2002年生まれ{age}歳。滋賀県の普通科高校を卒業し、関西大学を卒業。
           2022年より個人事業主として活動を開始し、スタートアップを中心にさまざまなサービス開発に従事。
           抽象度の高い課題に対しても、素早くプロトタイプを作ることが特に得意。
           趣味は旅と料理。最近は寿司握りに挑戦中。
@@ -258,7 +267,7 @@ export default function Top() {
         marginRight={{ md: '20%', base: '10%' }}
       >
         <Box style={{ marginTop: '20px' }}>
-          <Heading as="h2" size="xl">
+          <Heading as="h2" size="3xl">
             About
           </Heading>
           <Suspense fallback={<p>Loading...</p>}>
@@ -271,7 +280,7 @@ export default function Top() {
         marginLeft={{ md: '20%', base: '10%' }}
         marginRight={{ md: '20%', base: '10%' }}
       >
-        <Heading as="h2" size="xl" id="contact">
+        <Heading as="h2" size="3xl" id="contact">
           Contact
         </Heading>
         <Suspense fallback={<p>Loading...</p>}>

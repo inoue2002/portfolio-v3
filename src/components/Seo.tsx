@@ -29,7 +29,13 @@ const Seo: FC<MetaData> = ({
   const defaultTitle = 'IY Tech | ポートフォリオ'
   const defaultDescription =
     'IY Techでは、インターネットに関するアプリケーション開発・運営・企画を行い、さまざまな業界のシステム開発に携わっています。特にLINEアプリ開発に強みを持ち、LINE公式アカウントの開発やLINE APIを利用したサービス開発を得意としています。'
-  const defaultKeywords = ['LINE開発', 'Webアプリ開発', 'モバイルアプリ開発', 'フリーランス', 'エンジニア']
+  const defaultKeywords = [
+    'LINE開発',
+    'Webアプリ開発',
+    'モバイルアプリ開発',
+    'フリーランス',
+    'エンジニア',
+  ]
 
   const title = pageTitle ? `${pageTitle} | ${defaultTitle}` : defaultTitle
   const description = pageDescription ? pageDescription : defaultDescription
@@ -72,7 +78,7 @@ const Seo: FC<MetaData> = ({
       <meta name="viewport" content="width=device-width,initial-scale=1.0" />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      
+
       {/* OGP */}
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
@@ -82,16 +88,16 @@ const Seo: FC<MetaData> = ({
       <meta property="og:image" content={imgUrl} />
       <meta property="og:image:width" content={String(imgWidth)} />
       <meta property="og:image:height" content={String(imgHeight)} />
-      
+
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={imgUrl} />
-      
+
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
-      
+
       {/* 構造化データ */}
       <script
         type="application/ld+json"

@@ -1,12 +1,12 @@
-import { HamburgerIcon } from '@chakra-ui/icons'
 import { Box, Flex, Heading, Stack, useDisclosure } from '@chakra-ui/react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { HiOutlineMenu } from 'react-icons/hi'
 
 export default function Header() {
   const router = useRouter()
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const handleToggle = () => (isOpen ? onClose() : onOpen())
+  const { open, onOpen, onClose } = useDisclosure()
+  const handleToggle = () => (open ? onClose() : onOpen())
 
   return (
     <Flex
@@ -21,14 +21,10 @@ export default function Header() {
       aria-label="メインナビゲーション"
     >
       <Flex align="center" mr={5}>
-        <Link href="/"
-        onClick={() =>{
-          onClose()
-        }}
-        >
+        <Link href="/" onClick={() => onClose()}>
           <Heading
             as="h1"
-            size="lg"
+            size="2xl"
             letterSpacing={'tighter'}
             _hover={{ color: 'gray.900' }}
             transition="color 1s"
@@ -37,30 +33,30 @@ export default function Header() {
           </Heading>
         </Link>
       </Flex>
-      <Box 
-        display={{ base: 'block', md: 'none' }} 
+      <Box
+        display={{ base: 'block', md: 'none' }}
         onClick={handleToggle}
-        aria-label={isOpen ? 'メニューを閉じる' : 'メニューを開く'}
-        aria-expanded={isOpen}
+        aria-label={open ? 'メニューを閉じる' : 'メニューを開く'}
+        aria-expanded={open}
         role="button"
         tabIndex={0}
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {
-            handleToggle();
+            handleToggle()
           }
         }}
       >
-        <HamburgerIcon />
+        <HiOutlineMenu size={24} />
       </Box>
 
       <Stack
         direction={{ base: 'column', md: 'row' }}
-        display={{ base: isOpen ? 'block' : 'none', md: 'flex' }}
+        display={{ base: open ? 'block' : 'none', md: 'flex' }}
         width={{ base: 'full', md: 'auto' }}
         alignItems="center"
         justifyContent="flex-end"
         flexGrow={1}
-        spacing="40px"
+        gap="40px"
         mt={{ base: 4, md: 0 }}
         role="menu"
         aria-label="ナビゲーションメニュー"
@@ -83,7 +79,9 @@ export default function Header() {
             fontSize={'2xl'}
             as="b"
             display={{ base: 'block' }}
-            color={router.pathname === '/services' ? 'gray.900' : 'whiteAlpha.900'}
+            color={
+              router.pathname === '/services' ? 'gray.900' : 'whiteAlpha.900'
+            }
             role="menuitem"
             aria-current={router.pathname === '/services' ? 'page' : undefined}
             tabIndex={0}
@@ -121,7 +119,7 @@ export default function Header() {
         </Link>
       </Stack>
       <Box
-        display={{ base: isOpen ? 'block' : 'none', md: 'block' }}
+        display={{ base: open ? 'block' : 'none', md: 'block' }}
         mt={{ base: 4, md: 0 }}
       ></Box>
     </Flex>

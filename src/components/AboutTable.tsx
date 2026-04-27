@@ -1,40 +1,41 @@
-import { Table, Tbody, Td, Tr } from "@chakra-ui/react"
+import { Table } from '@chakra-ui/react'
 
 const AboutTable = () => {
   return (
-    <Table
-      variant="simple"
+    <Table.Root
+      variant="line"
       style={{ marginTop: '40px', width: '100%', tableLayout: 'fixed' }}
     >
-      <Tbody>
-        <Tr>
-          <Td>屋号</Td>
-          <Td>IY Tech</Td>
-        </Tr>
-        <Tr>
-          <Td>事業形態</Td>
-          <Td>個人事業主</Td>
-        </Tr>
-        <Tr>
-          <Td>代表</Td>
-          <Td>井上陽介</Td>
-        </Tr>
-        <Tr>
-          <Td>開業</Td>
-          <Td>2022年5月</Td>
-        </Tr>
-        <Tr>
-          <Td>事業内容</Td>
-          <Td>インターネットに関するアプリケーション開発・運営・企画</Td>
-        </Tr>
-        <Tr>
-          <Td>所在地</Td>
-          <Td>滋賀県大津市 / 大阪府吹田市</Td>
-        </Tr>
-      </Tbody>
-    </Table>
+      <Table.Body>
+        <Table.Row>
+          <Table.Cell>屋号</Table.Cell>
+          <Table.Cell>IY Tech</Table.Cell>
+        </Table.Row>
+        <Table.Row>
+          <Table.Cell>事業形態</Table.Cell>
+          <Table.Cell>個人事業主</Table.Cell>
+        </Table.Row>
+        <Table.Row>
+          <Table.Cell>代表</Table.Cell>
+          <Table.Cell>井上陽介</Table.Cell>
+        </Table.Row>
+        <Table.Row>
+          <Table.Cell>開業</Table.Cell>
+          <Table.Cell>2022年5月</Table.Cell>
+        </Table.Row>
+        <Table.Row>
+          <Table.Cell>事業内容</Table.Cell>
+          <Table.Cell>
+            インターネットに関するアプリケーション開発・運営・企画
+          </Table.Cell>
+        </Table.Row>
+        <Table.Row>
+          <Table.Cell>所在地</Table.Cell>
+          <Table.Cell>滋賀県大津市 / 大阪府吹田市</Table.Cell>
+        </Table.Row>
+      </Table.Body>
+    </Table.Root>
   )
 }
-
 
 export default AboutTable

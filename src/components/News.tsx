@@ -1,31 +1,31 @@
 import {
   Box,
+  type BoxProps,
   Container,
   Heading,
   HStack,
   Image,
   Link,
-  SpaceProps,
   Tag,
   Text,
-  useColorModeValue,
 } from '@chakra-ui/react'
 import React from 'react'
 import { NewsObj } from 'src/types/news'
+import { useColorModeValue } from 'src/components/ui/color-mode'
 
 interface IBlogTags {
   tags: Array<string>
-  marginTop?: SpaceProps['marginTop']
+  marginTop?: BoxProps['marginTop']
 }
 
 const BlogTags: React.FC<IBlogTags> = (props) => {
   return (
-    <HStack spacing={2} marginTop={props.marginTop}>
+    <HStack gap={2} marginTop={props.marginTop}>
       {props.tags.map((tag) => {
         return (
-          <Tag size={'md'} variant="solid" colorScheme="orange" key={tag}>
-            {tag}
-          </Tag>
+          <Tag.Root size={'md'} variant="solid" colorPalette="orange" key={tag}>
+            <Tag.Label>{tag}</Tag.Label>
+          </Tag.Root>
         )
       })}
     </HStack>
@@ -35,6 +35,11 @@ const BlogTags: React.FC<IBlogTags> = (props) => {
 const ArticleList = (props: { news: NewsObj[] }) => {
   const news = props.news
   console.log(news)
+  const dotGradient = useColorModeValue(
+    'radial(orange.600 1px, transparent 1px)',
+    'radial(orange.300 1px, transparent 1px)',
+  )
+  const textColor = useColorModeValue('gray.700', 'gray.200')
   return (
     <div>
       {news.map((i: NewsObj) => (
@@ -73,10 +78,7 @@ const ArticleList = (props: { news: NewsObj[] }) => {
               </Box>
               <Box zIndex="1" width="100%" position="absolute" height="100%">
                 <Box
-                  bgGradient={useColorModeValue(
-                    'radial(orange.600 1px, transparent 1px)',
-                    'radial(orange.300 1px, transparent 1px)',
-                  )}
+                  bgGradient={dotGradient}
                   backgroundSize="20px 20px"
                   opacity="0.4"
                   height="100%"
@@ -92,9 +94,9 @@ const ArticleList = (props: { news: NewsObj[] }) => {
             >
               <BlogTags tags={i.tags} />
               <Heading marginTop="1" id={`news-title-${i.id}`}>
-                <a 
-                  href={i.url} 
-                  target="_blank" 
+                <a
+                  href={i.url}
+                  target="_blank"
                   rel="noopener noreferrer"
                   aria-describedby={`news-content-${i.id}`}
                   tabIndex={0}
@@ -105,21 +107,16 @@ const ArticleList = (props: { news: NewsObj[] }) => {
               <Text
                 as="p"
                 marginTop="2"
-                color={useColorModeValue('gray.700', 'gray.200')}
+                color={textColor}
                 fontSize="lg"
                 id={`news-content-${i.id}`}
                 aria-labelledby={`news-title-${i.id}`}
               >
                 {i.content}
               </Text>
-              <HStack
-                marginTop="2"
-                spacing="2"
-                display="flex"
-                alignItems="center"
-              >
+              <HStack marginTop="2" gap="2" display="flex" alignItems="center">
                 <Text>—</Text>
-                <Text>{new Date(i.date).toLocaleDateString()}</Text>
+                <Text>{new Date(i.date).toLocaleDateString('ja-JP')}</Text>
               </HStack>
             </Box>
           </Box>
