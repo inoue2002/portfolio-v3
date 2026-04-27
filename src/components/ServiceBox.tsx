@@ -42,10 +42,10 @@ const ServiceBox = ({
           justifyContent: 'center',
         }}
       >
-        <Image 
-          src={src} 
-          alt={alt} 
-          width={150} 
+        <Image
+          src={src}
+          alt={alt}
+          width={150}
           height={150}
           sizes="150px"
           loading="lazy"
@@ -54,7 +54,9 @@ const ServiceBox = ({
       <Heading as="h3" size="lg" marginTop="1rem" id={`service-${title}`}>
         {title}
       </Heading>
-      <Text marginTop="0.5rem" aria-labelledby={`service-${title}`}>{description}</Text>
+      <Text marginTop="0.5rem" aria-labelledby={`service-${title}`}>
+        {description}
+      </Text>
     </Box>
   )
 }

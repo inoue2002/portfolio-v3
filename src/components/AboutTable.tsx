@@ -25,7 +25,9 @@ const AboutTable = () => {
         </Table.Row>
         <Table.Row>
           <Table.Cell>事業内容</Table.Cell>
-          <Table.Cell>インターネットに関するアプリケーション開発・運営・企画</Table.Cell>
+          <Table.Cell>
+            インターネットに関するアプリケーション開発・運営・企画
+          </Table.Cell>
         </Table.Row>
         <Table.Row>
           <Table.Cell>所在地</Table.Cell>

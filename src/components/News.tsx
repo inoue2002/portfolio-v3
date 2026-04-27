@@ -114,12 +114,7 @@ const ArticleList = (props: { news: NewsObj[] }) => {
               >
                 {i.content}
               </Text>
-              <HStack
-                marginTop="2"
-                gap="2"
-                display="flex"
-                alignItems="center"
-              >
+              <HStack marginTop="2" gap="2" display="flex" alignItems="center">
                 <Text>—</Text>
                 <Text>{new Date(i.date).toLocaleDateString('ja-JP')}</Text>
               </HStack>

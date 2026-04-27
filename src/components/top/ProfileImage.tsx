@@ -33,7 +33,13 @@ export default function Profile() {
       <motion.div
         initial={{ opacity: 1 }}
         animate={{ opacity: hover ? 0 : 1 }}
-        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+        }}
       >
         <Image
           src="/images/profile.webp"
@@ -46,7 +52,13 @@ export default function Profile() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: hover ? 1 : 0 }}
-        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+        }}
       >
         <Image
           src="/images/profile2.webp"

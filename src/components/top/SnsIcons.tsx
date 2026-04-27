@@ -11,11 +11,7 @@ export default function SnsIcons() {
       justifyContent="flex-start"
       marginBottom="20px"
     >
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-      >
+      <Box display="flex" justifyContent="center" alignItems="center">
         <a
           href="https://x.com/inoue2002"
           target="_blank"
@@ -33,11 +29,7 @@ export default function SnsIcons() {
         </a>
       </Box>
 
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-      >
+      <Box display="flex" justifyContent="center" alignItems="center">
         <a
           href="https://github.com/inoue2002"
           target="_blank"

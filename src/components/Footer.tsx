@@ -56,26 +56,26 @@ export default function Footer() {
           justify={{ base: 'center', md: 'space-between' }}
           align={{ base: 'center', md: 'center' }}
         >
-        <Text>
-          © {new Date().getFullYear()} Yosuke Inoue /{' '}
-          <Link href="/policy" textDecoration={'underline'}>
-            プライバシーポリシー
-          </Link>
-        </Text>
-        <Stack direction={'row'} gap={6}>
-          <SocialButton label={'X'} href={'https://x.com/inoue2002'}>
-            <FaXTwitter />
-          </SocialButton>
-          <SocialButton
-            label={'Mail'}
-            href={'mailto:inoueyosuke2002@gmail.com'}
-          >
-            <FaEnvelope />
-          </SocialButton>
-          <SocialButton label={'line'} href={'https://lin.ee/MIqkbLL'}>
-            <FaLine />
-          </SocialButton>
-        </Stack>
+          <Text>
+            © {new Date().getFullYear()} Yosuke Inoue /{' '}
+            <Link href="/policy" textDecoration={'underline'}>
+              プライバシーポリシー
+            </Link>
+          </Text>
+          <Stack direction={'row'} gap={6}>
+            <SocialButton label={'X'} href={'https://x.com/inoue2002'}>
+              <FaXTwitter />
+            </SocialButton>
+            <SocialButton
+              label={'Mail'}
+              href={'mailto:inoueyosuke2002@gmail.com'}
+            >
+              <FaEnvelope />
+            </SocialButton>
+            <SocialButton label={'line'} href={'https://lin.ee/MIqkbLL'}>
+              <FaLine />
+            </SocialButton>
+          </Stack>
         </Stack>
       </Container>
     </Box>
