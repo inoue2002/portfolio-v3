@@ -1,10 +1,9 @@
-import { useInView } from 'framer-motion'
+import { useInView } from 'motion/react'
 import { ReactNode, useRef } from 'react'
 
 const Section = ({ children, background }: SectionProps) => {
   const ref = useRef(null)
-  // @ts-ignore
-  const isInView = useInView(ref, { triggerOnce: true })
+  const isInView = useInView(ref, { once: true })
 
   return (
     <section

@@ -51,7 +51,7 @@ const ServiceBox = ({
           loading="lazy"
         />
       </Box>
-      <Heading as="h3" size="md" marginTop="1rem" id={`service-${title}`}>
+      <Heading as="h3" size="lg" marginTop="1rem" id={`service-${title}`}>
         {title}
       </Heading>
       <Text marginTop="0.5rem" aria-labelledby={`service-${title}`}>{description}</Text>

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 
 export default function Profile() {
   const [hover, setHover] = useState(false)
@@ -38,9 +38,8 @@ export default function Profile() {
         <Image
           src="/images/profile.webp"
           alt="profile image"
-          layout="fill"
-          objectFit="cover"
-          style={{ borderRadius: '50%' }}
+          fill
+          style={{ objectFit: 'cover', borderRadius: '50%' }}
           title="プロフィール画像"
         />
       </motion.div>
@@ -52,9 +51,8 @@ export default function Profile() {
         <Image
           src="/images/profile2.webp"
           alt="profile image"
-          layout="fill"
-          objectFit="cover"
-          style={{ borderRadius: '50%' }}
+          fill
+          style={{ objectFit: 'cover', borderRadius: '50%' }}
           title="プロフィール画像"
         />
       </motion.div>

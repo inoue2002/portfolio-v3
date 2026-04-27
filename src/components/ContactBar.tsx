@@ -14,7 +14,7 @@ const ContactBar: React.FC = () => {
       <Text fontSize="lg" className="text-bold" marginBottom="1rem" paddingX={4}>
         ご相談・お見積もり お気軽にお問い合わせください
       </Text>
-      <Button colorScheme="teal" onClick={handleContactClick}>
+      <Button colorPalette="teal" onClick={handleContactClick}>
         お問い合わせ
       </Button>
       <Flex justifyContent="center" alignItems="center" marginTop="1rem">

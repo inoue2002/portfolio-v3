@@ -13,16 +13,8 @@ const Contact = () => {
         alignItems="center"
         minHeight="100%"
       >
-        <Button
-          as="a"
-          href="https://lin.ee/MIqkbLL"
-          colorScheme="teal"
-          mt={20}
-          p={4}
-          mb={4}
-          size="lg"
-        >
-          LINEでのお問い合わせ
+        <Button asChild colorPalette="teal" mt={20} p={4} mb={4} size="lg">
+          <a href="https://lin.ee/MIqkbLL">LINEでのお問い合わせ</a>
         </Button>
 
         <div
