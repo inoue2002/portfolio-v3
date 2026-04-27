@@ -18,6 +18,15 @@ const DynamicWorkHistory = lazy(() => import('./top/WorkHistory'))
 const DynamicWorks = lazy(() => import('./top/Works'))
 const AboutTable = lazy(() => import('./AboutTable'))
 
+const BIRTH_DATE = new Date('2002-04-12')
+const calcAge = (birth: Date, today = new Date()): number => {
+  let age = today.getFullYear() - birth.getFullYear()
+  const m = today.getMonth() - birth.getMonth()
+  if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) age--
+  return age
+}
+const age = calcAge(BIRTH_DATE)
+
 export default function Top() {
   return (
     <>
@@ -199,7 +208,7 @@ export default function Top() {
           maxWidth="600px"
           margin="10px auto"
         >
-          2002年生まれ24歳。滋賀県の普通科高校を卒業し、関西大学を卒業。
+          2002年生まれ{age}歳。滋賀県の普通科高校を卒業し、関西大学を卒業。
           2022年より個人事業主として活動を開始し、スタートアップを中心にさまざまなサービス開発に従事。
           抽象度の高い課題に対しても、素早くプロトタイプを作ることが特に得意。
           趣味は旅と料理。最近は寿司握りに挑戦中。
