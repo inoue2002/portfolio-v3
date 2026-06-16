@@ -27,15 +27,6 @@
     "url": "https://tateka.app"
   },
   {
-    "title": "【株式会社BUTAI様】社内向けShopify-OBSの連携システムの開発",
-    "id": 4,
-    "imageUrl": "/services/butai.webp",
-    "date": "2024-06-01",
-    "content": "Shopifyの注文情報をOBS上に自動で反映するシステムを開発しました🛒",
-    "tags": ["Shopify", "OBS"],
-    "url": ""
-  },
-  {
     "title": "LINEでフォトコンテストを開催できる「Lコンテスト」",
     "id": 5,
     "imageUrl": "/services/lcontest.webp",
