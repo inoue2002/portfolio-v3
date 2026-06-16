@@ -8,11 +8,11 @@ const news: NewsObj[] = newsData
   .sort((a, b) => b.date.getTime() - a.date.getTime())
 
 export default function NewsPage() {
-  // ニュースページ用の構造化データ
+  // Works ページ用の構造化データ
   const newsStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'Blog',
-    headline: 'IY Tech ニュース',
+    headline: 'IY Tech Works',
     description: 'IY Techの活動やプロジェクトに関する最新情報をお届けします。',
     author: {
       '@type': 'Person',
@@ -38,9 +38,16 @@ export default function NewsPage() {
   return (
     <div>
       <Seo
-        pageTitle="ニュース"
-        pageDescription="IY Techの活動やプロジェクトに関する最新情報をお届けします。受賞歴やイベント参加など、さまざまな活動をご紹介します。"
-        pageKeywords={['ニュース', '受賞歴', 'イベント', 'セミナー']}
+        pageTitle="Works"
+        pageDescription="IY Techの開発実績や活動をご紹介します。サービス開発・受賞歴・イベント登壇など、さまざまな取り組みをまとめています。"
+        pageKeywords={[
+          '実績',
+          'Works',
+          '開発事例',
+          '受賞歴',
+          'イベント',
+          'セミナー',
+        ]}
         pageType="article"
         structuredData={newsStructuredData}
       />
