@@ -2,6 +2,7 @@ import { Box, Flex, Heading, Stack, useDisclosure } from '@chakra-ui/react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { HiOutlineMenu } from 'react-icons/hi'
+import RequirementsHearingChat from './RequirementsHearingChat'
 
 export default function Header() {
   const router = useRouter()
@@ -102,21 +103,7 @@ export default function Header() {
             News
           </Heading>
         </Link>
-        <Link href="/#contact" passHref>
-          <Heading
-            fontSize={'2xl'}
-            as="b"
-            display={{ base: 'block' }}
-            color={
-              router.pathname === '/#contact' ? 'gray.900' : 'whiteAlpha.900'
-            }
-            role="menuitem"
-            aria-current={router.pathname === '/#contact' ? 'page' : undefined}
-            tabIndex={0}
-          >
-            Contact
-          </Heading>
-        </Link>
+        <RequirementsHearingChat onOpen={() => onClose()} />
       </Stack>
       <Box
         display={{ base: open ? 'block' : 'none', md: 'block' }}
