@@ -66,10 +66,7 @@ export default function Footer() {
             <SocialButton label={'X'} href={'https://x.com/inoue2002'}>
               <FaXTwitter />
             </SocialButton>
-            <SocialButton
-              label={'Mail'}
-              href={'mailto:info@iy-tech.work'}
-            >
+            <SocialButton label={'Mail'} href={'mailto:info@iy-tech.work'}>
               <FaEnvelope />
             </SocialButton>
             <SocialButton label={'line'} href={'https://lin.ee/MIqkbLL'}>

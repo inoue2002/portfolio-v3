@@ -223,7 +223,14 @@ export default function RequirementsHearingChat({ onOpen, trigger }: Props) {
             borderRadius="2xl"
           >
             {/* ヘッダー */}
-            <Flex align="center" gap={3} bg="teal.500" color="white" px={5} py={4}>
+            <Flex
+              align="center"
+              gap={3}
+              bg="teal.500"
+              color="white"
+              px={5}
+              py={4}
+            >
               <Flex
                 align="center"
                 justify="center"
