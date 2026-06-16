@@ -1,14 +1,8 @@
 import { Box, Button, Flex, Text } from '@chakra-ui/react'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
+import RequirementsHearingChat from './RequirementsHearingChat'
 
 const ContactBar: React.FC = () => {
-  const router = useRouter()
-
-  const handleContactClick = () => {
-    router.push('#contact')
-  }
-
   return (
     <Box width={'100%'} textAlign="center" paddingY={10}>
       <Text
@@ -19,9 +13,9 @@ const ContactBar: React.FC = () => {
       >
         ご相談・お見積もり お気軽にお問い合わせください
       </Text>
-      <Button colorPalette="teal" onClick={handleContactClick}>
-        お問い合わせ
-      </Button>
+      <RequirementsHearingChat
+        trigger={<Button colorPalette="teal">お問い合わせ</Button>}
+      />
       <Flex justifyContent="center" alignItems="center" marginTop="1rem">
         <Box marginRight="1rem">
           <Image

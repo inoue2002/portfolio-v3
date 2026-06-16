@@ -20,6 +20,9 @@ export default function Header() {
       color="white"
       role="navigation"
       aria-label="メインナビゲーション"
+      position="sticky"
+      top={0}
+      zIndex={1000}
     >
       <Flex align="center" mr={5}>
         <Link href="/" onClick={() => onClose()}>
@@ -100,7 +103,7 @@ export default function Header() {
             aria-current={router.pathname === '/news' ? 'page' : undefined}
             tabIndex={0}
           >
-            News
+            Works
           </Heading>
         </Link>
         <RequirementsHearingChat onOpen={() => onClose()} />

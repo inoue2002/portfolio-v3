@@ -11,13 +11,17 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react'
-import { useEffect, useRef, useState } from 'react'
+import { type ReactNode, useEffect, useRef, useState } from 'react'
 import { FiSend } from 'react-icons/fi'
 import { RiRobot2Line } from 'react-icons/ri'
 
 // お問い合わせフォーム（Contact セクションに埋め込まれているものと同一）
 const FORM_BASE_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLScUfiliW6HuYU2DBAsL10V3K6XOzlaG_PSJuGW2vY9tfguXuw/viewform?usp=pp_url'
+// フォーム送信用エンドポイント。チャット完了時にここへ送信してログを残す
+// （ユーザーが最終的にフォーム送信しなくても入力内容を記録できるようにするため）
+const FORM_RESPONSE_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLScUfiliW6HuYU2DBAsL10V3K6XOzlaG_PSJuGW2vY9tfguXuw/formResponse'
 
 // ヒアリング項目（質問する順番 / 各項目の Google Form entry ID）
 type Question = {
@@ -75,9 +79,11 @@ const initialMessages = (): Message[] => [
 
 type Props = {
   onOpen?: () => void
+  // 起動ボタンを差し替えたい場合に渡す（未指定ならデフォルトの「要件ヒアリング」ボタン）
+  trigger?: ReactNode
 }
 
-export default function RequirementsHearingChat({ onOpen }: Props) {
+export default function RequirementsHearingChat({ onOpen, trigger }: Props) {
   const [open, setOpen] = useState(false)
   const [messages, setMessages] = useState<Message[]>(initialMessages)
   const [answers, setAnswers] = useState<Record<string, string>>({})
@@ -112,6 +118,21 @@ export default function RequirementsHearingChat({ onOpen }: Props) {
     return `${FORM_BASE_URL}&${params}`
   }
 
+  // チャット完了時に Google Form へ送信してログを残す。
+  // formResponse は CORS 非対応なので no-cors（送りっぱなし・結果は読めない）。
+  const logToForm = (allAnswers: Record<string, string>) => {
+    const body = new URLSearchParams()
+    QUESTIONS.forEach((q) => body.append(q.entry, allAnswers[q.key] ?? ''))
+    void fetch(FORM_RESPONSE_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body.toString(),
+    }).catch(() => {
+      // 失敗してもユーザー体験は止めない（ログ目的のため）
+    })
+  }
+
   const handleSend = () => {
     const value = input.trim()
     if (value === '' || done || typing) return
@@ -143,6 +164,7 @@ export default function RequirementsHearingChat({ onOpen }: Props) {
     window.setTimeout(() => {
       setTyping(false)
       if (isLast) {
+        logToForm(nextAnswers)
         setFormUrl(buildFormUrl(nextAnswers))
         setDone(true)
         setMessages((prev) => [
@@ -176,17 +198,19 @@ export default function RequirementsHearingChat({ onOpen }: Props) {
       placement="center"
     >
       <Dialog.Trigger asChild>
-        <Button
-          bg="orange.400"
-          color="white"
-          fontSize="lg"
-          fontWeight="bold"
-          px={6}
-          borderRadius="full"
-          _hover={{ bg: 'orange.500' }}
-        >
-          要件ヒアリング
-        </Button>
+        {trigger ?? (
+          <Button
+            bg="orange.400"
+            color="white"
+            fontSize="lg"
+            fontWeight="bold"
+            px={6}
+            borderRadius="full"
+            _hover={{ bg: 'orange.500' }}
+          >
+            要件ヒアリング
+          </Button>
+        )}
       </Dialog.Trigger>
       <Portal>
         <Dialog.Backdrop />

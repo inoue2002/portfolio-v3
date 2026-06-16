@@ -68,7 +68,7 @@ export default function Footer() {
             </SocialButton>
             <SocialButton
               label={'Mail'}
-              href={'mailto:inoueyosuke2002@gmail.com'}
+              href={'mailto:info@iy-tech.work'}
             >
               <FaEnvelope />
             </SocialButton>
