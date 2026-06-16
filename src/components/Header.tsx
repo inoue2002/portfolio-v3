@@ -93,14 +93,14 @@ export default function Header() {
             Services
           </Heading>
         </Link>
-        <Link href="/news" passHref>
+        <Link href="/works" passHref>
           <Heading
             fontSize={'2xl'}
             as="b"
             display={{ base: 'block' }}
-            color={router.pathname === '/news' ? 'gray.900' : 'whiteAlpha.900'}
+            color={router.pathname === '/works' ? 'gray.900' : 'whiteAlpha.900'}
             role="menuitem"
-            aria-current={router.pathname === '/news' ? 'page' : undefined}
+            aria-current={router.pathname === '/works' ? 'page' : undefined}
             tabIndex={0}
           >
             Works
