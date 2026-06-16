@@ -31,7 +31,7 @@ const AboutTable = () => {
         </Table.Row>
         <Table.Row>
           <Table.Cell>所在地</Table.Cell>
-          <Table.Cell>滋賀県大津市 / 大阪府吹田市</Table.Cell>
+          <Table.Cell>東京都・杉並区</Table.Cell>
         </Table.Row>
       </Table.Body>
     </Table.Root>

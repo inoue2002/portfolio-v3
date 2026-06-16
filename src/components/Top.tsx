@@ -9,7 +9,6 @@ import ServiceBox from './ServiceBox'
 import ContactBar from './ContactBar'
 
 // Lazy load non-critical components
-const Contact = lazy(() => import('./top/Contact'))
 const DynamicActivities = lazy(() => import('./top/Activites'))
 const DynamicProfile = lazy(() => import('./top/ProfileImage'))
 const DynamicSkils = lazy(() => import('./top/Skils'))
@@ -274,18 +273,6 @@ export default function Top() {
             <AboutTable />
           </Suspense>
         </Box>
-      </Box>
-      <Box
-        marginTop={'20px'}
-        marginLeft={{ md: '20%', base: '10%' }}
-        marginRight={{ md: '20%', base: '10%' }}
-      >
-        <Heading as="h2" size="3xl" id="contact">
-          Contact
-        </Heading>
-        <Suspense fallback={<p>Loading...</p>}>
-          <Contact />
-        </Suspense>
       </Box>
     </>
   )

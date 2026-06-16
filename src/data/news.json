@@ -1,5 +1,41 @@
 [
   {
+    "title": "笑屋株式会社の同窓会運営LINEミニアプリ「同窓会LINK」を開発しました",
+    "id": 5,
+    "imageUrl": "/news/dousoukai-link.webp",
+    "date": "2026-04-16",
+    "content": "累計50万人以上の同窓会プロデュース実績を持つ笑屋株式会社様と、同窓会の準備・運営に特化したLINEミニアプリ「同窓会LINK」を開発しました。ダウンロードや登録が不要で、個人のLINE IDを公開せずに出欠管理・名簿のデジタル化・プッシュ通知での連絡ができ、幹事の「人を集める・情報を整理する」負担を大きく軽減します。LINE API Expertとして、LINEミニアプリならではの体験設計から開発までを担当しました。",
+    "tags": ["LINE", "LINEミニアプリ", "Webアプリ開発"],
+    "url": "https://prtimes.jp/main/html/rd/p/000000022.000036026.html"
+  },
+  {
+    "title": "大阪産業局 ソフト産業プラザ TEQS のセミナー「AIと一緒にアプリを作ろう─v0でアプリ開発入門」で講師を務めました",
+    "id": 7,
+    "imageUrl": "/news/teqs-v0-seminar.webp",
+    "date": "2026-02-26",
+    "content": "大阪産業局が運営するソフト産業プラザ TEQSのトライアルセミナー「アイデアをカタチに：AIと一緒にアプリを作ろう─『v0』でアプリ開発入門」で講師を務めました。アプリ作成に特化した生成AIプラットフォーム「v0」を使い、プロンプトから生成・調整・デプロイまでの開発ステップを解説。参加者がその場でオリジナルアプリを作るハンズオンを行い、Supabase・Vercel・GitHubと組み合わせた実践的な活用方法まで紹介しました。",
+    "tags": ["AI", "セミナー", "アプリ開発"],
+    "url": "https://ebis.obda.or.jp/service/47030/detail?H_A_NO=47030"
+  },
+  {
+    "title": "株式会社novactの「場所のプレイリスト」アプリ「tadoru（タドル）」の開発に携わりました",
+    "id": 6,
+    "imageUrl": "/news/tadoru.webp",
+    "date": "2025-12-17",
+    "content": "「検索」から「プレイリスト」へ——音楽のプレイリストのように、お気に入りのスポットをテーマ別にまとめ、URLで手軽に共有できるiOSアプリ「tadoru（タドル）」の開発に携わりました。「誰がおすすめするか」を大切にし、信頼できる人の視点から行き先を選べる体験を目指したサービスです。デザイン・ベンチャー・スタジオの株式会社novact様が2023年から構想を進め、2025年12月にiOS版をリリースしました。",
+    "tags": ["iOSアプリ", "アプリ開発", "プロトタイピング"],
+    "url": "https://prtimes.jp/main/html/rd/p/000000008.000086151.html"
+  },
+  {
+    "title": "【株式会社BUTAI様】社内向けShopify-OBSの連携システムの開発",
+    "id": 8,
+    "imageUrl": "/news/butai.webp",
+    "date": "2024-06-01",
+    "content": "Shopifyの注文情報をOBS上に自動で反映するシステムを開発しました🛒",
+    "tags": ["Shopify", "OBS"],
+    "url": ""
+  },
+  {
     "title": "Panasonicと共同でデザインしたコンセプトがRed Dot Design Award2022に選ばれました",
     "id": 1,
     "imageUrl": "/news/kototabi.webp",
