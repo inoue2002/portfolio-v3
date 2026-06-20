@@ -6,17 +6,17 @@ This is my personal portfolio website built with Next.js, showcasing my skills, 
 
 - Responsive design
 - Modern UI with Chakra UI
-- Smooth animations with Framer Motion
+- Smooth animations with Motion
 - SEO optimized
 - TypeScript support
 
 ## Technologies Used
 
-- Next.js 14
-- React 18
+- Next.js 16
+- React 19
 - TypeScript
-- Chakra UI
-- Framer Motion
+- Chakra UI v3
+- Motion
 
 ## Getting Started
 
