@@ -106,7 +106,9 @@ export default function Header() {
             Works
           </Heading>
         </Link>
-        <RequirementsHearingChat onOpen={() => onClose()} />
+        <Box mt={{ base: 4, md: 0 }}>
+          <RequirementsHearingChat onOpen={() => onClose()} />
+        </Box>
       </Stack>
       <Box
         display={{ base: open ? 'block' : 'none', md: 'block' }}
