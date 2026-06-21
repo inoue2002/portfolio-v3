@@ -326,6 +326,7 @@ export default function RequirementsHearingChat({ onOpen, trigger }: Props) {
                 disabled={done}
                 borderRadius="full"
                 bg="gray.50"
+                fontSize="16px"
               />
               <IconButton
                 aria-label="送信"
