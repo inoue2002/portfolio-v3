@@ -1,10 +1,10 @@
 import { Heading, Spacer } from '@chakra-ui/react'
 
-export default function Skils() {
+export default function Skills() {
   return (
     <div>
       <Heading as="h2" size="3xl">
-        Skils
+        Skills
       </Heading>
       <Spacer marginTop={'10px'} />
       <Heading as="h3" size="lg" marginTop={'5px'}>
