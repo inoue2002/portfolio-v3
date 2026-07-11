@@ -36,7 +36,7 @@ export default function Hero() {
             as="h1"
             fontWeight="extraBold"
             lineHeight={1.3}
-            fontSize={{ base: '2rem', md: '3.4rem' }}
+            fontSize="clamp(1.9rem, 1rem + 3.2vw, 3.4rem)"
             color="gray.900"
           >
             あなたの事業の、

@@ -13,7 +13,7 @@ const highlights = [...newsData]
 export default function WorksHighlight() {
   return (
     <SectionShell label="Works" title="事業と共に、作ってきた。" bg="gray.50">
-      <SimpleGrid columns={{ base: 1, md: 3 }} gap={6}>
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={6}>
         {highlights.map((item, index) => (
           <Reveal key={item.id} delay={index * 0.1}>
             <a href={item.url} target="_blank" rel="noopener noreferrer">

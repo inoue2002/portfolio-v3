@@ -46,7 +46,7 @@ export default function Process() {
       title="解像度を上げてから、作る。"
       bg="gray.50"
     >
-      <SimpleGrid columns={{ base: 1, sm: 2, lg: 4 }} gap={6}>
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} gap={6}>
         {STEPS.map((step, index) => (
           <Reveal key={step.number} delay={index * 0.1}>
             <Box

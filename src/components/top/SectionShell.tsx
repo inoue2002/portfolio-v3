@@ -30,7 +30,7 @@ const SectionShell = ({
         <Heading
           as="h2"
           fontWeight="extraBold"
-          fontSize={{ base: '1.6rem', md: '2.4rem' }}
+          fontSize="clamp(1.5rem, 0.9rem + 1.9vw, 2.4rem)"
           lineHeight={1.4}
           color="gray.900"
           marginTop={2}

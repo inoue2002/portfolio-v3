@@ -47,7 +47,7 @@ export default function ServicesGrid() {
           課題に合わせて、最適な技術を組み合わせます。特定の手段ありきではなく、事業にとっての最適解から逆算します。
         </Text>
       </Reveal>
-      <SimpleGrid columns={{ base: 1, sm: 2, lg: 3 }} gap={6}>
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={6}>
         {SERVICES.map((service, index) => (
           <Reveal key={service.title} delay={index * 0.08}>
             <Flex
