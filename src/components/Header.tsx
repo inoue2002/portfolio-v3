@@ -75,7 +75,7 @@ export default function Header() {
             aria-current={router.pathname === '/' ? 'page' : undefined}
             tabIndex={0}
           >
-            Me
+            Home
           </Heading>
         </Link>
         <Link href="/services" passHref>

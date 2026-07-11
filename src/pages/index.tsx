@@ -8,7 +8,7 @@ export default function Home() {
     '@type': 'ProfessionalService',
     name: 'IY Tech',
     description:
-      'IY Techは、事業に寄り添う「1人目のエンジニア」として伴走する開発パートナーです。予算とご要望を深く伺い、AIと共に早く賢く、最適な実現方法をご提案します。',
+      'IY Techは、事業に寄り添う「1人目のエンジニア」として伴走する開発パートナーです。事業を深く理解した上で、AIも駆使して最適な実現方法をご提案します。',
     url: SITE_URL,
     logo: `${SITE_URL}/news/portfolio.webp`,
     address: {
@@ -33,7 +33,7 @@ export default function Home() {
     <div>
       <Seo
         pageTitle="ホーム"
-        pageDescription="IY Techは、事業に寄り添う「1人目のエンジニア」として伴走する開発パートナーです。予算とご要望を深く伺い、AIと共に早く賢く、最適な実現方法をご提案。保守運用まで、作って終わりにしない開発を行います。"
+        pageDescription="IY Techは、事業に寄り添う「1人目のエンジニア」として伴走する開発パートナーです。事業を深く理解した上で、AIも駆使して最適な実現方法をご提案。保守運用まで、作って終わりにしない開発を行います。"
         pageKeywords={[
           'LINE API Expert',
           'フリーランスエンジニア',

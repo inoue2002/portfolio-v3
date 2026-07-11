@@ -21,7 +21,7 @@ const ACTIVITIES = [
 
 export default function CompanySection() {
   return (
-    <SectionShell label="Company" title="会社概要" bg="gray.50">
+    <SectionShell label="About" title="事業概要" bg="gray.50">
       <SimpleGrid columns={{ base: 1, lg: 2 }} gap={{ base: 10, lg: 16 }}>
         <Reveal>
           <Box bg="white" borderRadius="xl" padding={{ base: 4, md: 8 }}>

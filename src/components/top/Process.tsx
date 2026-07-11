@@ -26,9 +26,9 @@ const STEPS = [
   {
     number: '03',
     icon: HiOutlineRocketLaunch,
-    title: 'AIと共に、早く賢く',
+    title: 'AIと共に、素早く形に',
     description:
-      '動くプロトタイプを素早く形にし、確かめながら構築します。手戻りを減らし、開発スピードを最大化します。',
+      'AIを使いこなし、動くプロトタイプを短期間で形にします。確かめながら構築することで、手戻りを減らします。',
   },
   {
     number: '04',

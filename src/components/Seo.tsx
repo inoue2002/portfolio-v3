@@ -30,7 +30,7 @@ const Seo: FC<MetaData> = ({
   const router = useRouter()
   const defaultTitle = 'IY Tech | ポートフォリオ'
   const defaultDescription =
-    'IY Techは、事業に寄り添う「1人目のエンジニア」として伴走する開発パートナーです。予算とご要望を深く伺い、AIと共に早く賢く、最適な実現方法をご提案。LINEアプリ開発・Webアプリ開発・AI活用から保守運用まで、作って終わりにしない開発を行います。'
+    'IY Techは、事業に寄り添う「1人目のエンジニア」として伴走する開発パートナーです。事業を深く理解した上で、AIも駆使して最適な実現方法をご提案。LINEアプリ開発・Webアプリ開発・AI活用から保守運用まで、作って終わりにしない開発を行います。'
   const defaultKeywords = [
     'LINE開発',
     'Webアプリ開発',

@@ -4,11 +4,7 @@ import Link from 'next/link'
 import { HiCheckCircle } from 'react-icons/hi2'
 import RequirementsHearingChat from '../RequirementsHearingChat'
 
-const TRUST_ITEMS = [
-  'LINE API Expert 認定',
-  '未踏ジュニア2020 スーパークリエータ',
-  '取引実績 10社以上',
-]
+const TRUST_ITEMS = ['LINE API Expert 認定', '取引実績 10社以上']
 
 const fadeUp = (delay: number) => ({
   initial: { opacity: 0, y: 24 },
@@ -54,7 +50,7 @@ export default function Hero() {
             lineHeight={1.9}
           >
             作って終わりにしない。事業に寄り添い、保守運用も機能追加も共に走り続ける開発パートナーです。
-            予算とご要望を深く伺い、AIと共に早く賢く、最適な実現方法をご提案します。
+            まず事業を深く理解し、AIも駆使して、最適な実現方法をご提案します。
           </Text>
         </motion.div>
         <motion.div {...fadeUp(0.3)}>
