@@ -1,8 +1,7 @@
-import { Box, Button, Flex, Tag, Text } from '@chakra-ui/react'
-import Image from 'next/image'
+import { Button, Flex, SimpleGrid } from '@chakra-ui/react'
 import Link from 'next/link'
-import { SimpleGrid } from '@chakra-ui/react'
 import newsData from '../../data/news.json'
+import WorkCard from '../WorkCard'
 import Reveal from './Reveal'
 import SectionShell from './SectionShell'
 
@@ -19,53 +18,7 @@ export default function WorksHighlight() {
       <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={6}>
         {highlights.map((item, index) => (
           <Reveal key={item.id} delay={index * 0.1}>
-            <a href={item.url} target="_blank" rel="noopener noreferrer">
-              <Box
-                bg="white"
-                borderRadius="xl"
-                overflow="hidden"
-                boxShadow="sm"
-                height="100%"
-                transition="transform 0.25s ease, box-shadow 0.25s ease"
-                _hover={{ transform: 'translateY(-4px)', boxShadow: 'md' }}
-              >
-                <Box position="relative" aspectRatio={16 / 9}>
-                  <Image
-                    src={item.imageUrl}
-                    alt={item.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 360px"
-                    style={{ objectFit: 'cover' }}
-                    loading="lazy"
-                  />
-                </Box>
-                <Box padding={6}>
-                  <Flex gap={2} flexWrap="wrap" marginBottom={3}>
-                    {item.tags.map((tag) => (
-                      <Tag.Root key={tag} colorPalette="teal" size="sm">
-                        <Tag.Label>{tag}</Tag.Label>
-                      </Tag.Root>
-                    ))}
-                  </Flex>
-                  <Text
-                    fontWeight="extraBold"
-                    color="gray.900"
-                    lineHeight={1.6}
-                  >
-                    {item.title}
-                  </Text>
-                  <Text
-                    marginTop={3}
-                    color="gray.600"
-                    fontSize="sm"
-                    lineHeight={1.8}
-                    lineClamp={3}
-                  >
-                    {item.content}
-                  </Text>
-                </Box>
-              </Box>
-            </a>
+            <WorkCard item={item} />
           </Reveal>
         ))}
       </SimpleGrid>

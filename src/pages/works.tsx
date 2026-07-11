@@ -1,5 +1,8 @@
-import News from 'src/components/News'
+import { SimpleGrid } from '@chakra-ui/react'
 import Seo, { SITE_URL } from 'src/components/Seo'
+import WorkCard from 'src/components/WorkCard'
+import Reveal from 'src/components/top/Reveal'
+import SectionShell from 'src/components/top/SectionShell'
 import newsData from 'src/data/news.json'
 import servicesData from 'src/data/services.json'
 import type { NewsObj } from 'src/types/news'
@@ -58,7 +61,15 @@ export default function NewsPage() {
         pageType="article"
         structuredData={newsStructuredData}
       />
-      <News news={news} />
+      <SectionShell label="Works" title="開発実績・活動" bg="gray.50">
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={6}>
+          {news.map((item, index) => (
+            <Reveal key={item.id} delay={(index % 3) * 0.08}>
+              <WorkCard item={item} />
+            </Reveal>
+          ))}
+        </SimpleGrid>
+      </SectionShell>
     </div>
   )
 }
