@@ -30,7 +30,7 @@ const Seo: FC<MetaData> = ({
   const router = useRouter()
   const defaultTitle = 'IY Tech | ポートフォリオ'
   const defaultDescription =
-    'IY Techでは、インターネットに関するアプリケーション開発・運営・企画を行い、さまざまな業界のシステム開発に携わっています。特にLINEアプリ開発に強みを持ち、LINE公式アカウントの開発やLINE APIを利用したサービス開発を得意としています。'
+    'IY Techは、事業に寄り添う「1人目のエンジニア」として伴走する開発パートナーです。事業を深く理解した上で、AIと共に最適な実現方法をご提案。LINEアプリ開発・Webアプリ開発・AI活用から保守運用まで、作って終わりにしない開発を行います。'
   const defaultKeywords = [
     'LINE開発',
     'Webアプリ開発',

@@ -12,6 +12,12 @@ const nextConfig = {
         destination: '/works',
         permanent: true,
       },
+      // /services は /works に統合（既存リンク・SEO対策）
+      {
+        source: '/services',
+        destination: '/works',
+        permanent: true,
+      },
     ]
   },
 }

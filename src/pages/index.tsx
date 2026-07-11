@@ -8,7 +8,7 @@ export default function Home() {
     '@type': 'ProfessionalService',
     name: 'IY Tech',
     description:
-      'IY Techでは、インターネットに関するアプリケーション開発・運営・企画を行い、さまざまな業界のシステム開発に携わっています。特にLINEアプリ開発に強みを持ち、LINE公式アカウントの開発やLINE APIを利用したサービス開発を得意としています。',
+      'IY Techは、事業に寄り添う「1人目のエンジニア」として伴走する開発パートナーです。事業を深く理解した上で、AIと共に最適な実現方法をご提案します。',
     url: SITE_URL,
     logo: `${SITE_URL}/news/portfolio.webp`,
     address: {
@@ -33,7 +33,7 @@ export default function Home() {
     <div>
       <Seo
         pageTitle="ホーム"
-        pageDescription="IY Techでは、インターネットに関するアプリケーション開発・運営・企画を行い、さまざまな業界のシステム開発に携わっています。特にLINEアプリ開発に強みを持ち、LINE公式アカウントの開発やLINE APIを利用したサービス開発を得意としています。"
+        pageDescription="IY Techは、事業に寄り添う「1人目のエンジニア」として伴走する開発パートナーです。事業を深く理解した上で、AIと共に最適な実現方法をご提案。保守運用まで、作って終わりにしない開発を行います。"
         pageKeywords={[
           'LINE API Expert',
           'フリーランスエンジニア',

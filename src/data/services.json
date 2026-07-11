@@ -2,19 +2,23 @@
   {
     "title": "会話分析くん",
     "id": 1,
-    "imageUrl": "/services/message-checker.webp",
+    "imageUrl": "/services/message-checker-v2.webp",
     "date": "2024-01-01",
     "content": "LINEのトーク履歴を送信するだけで、簡単に分析することができます🔍",
-    "tags": ["LINEBot"],
+    "tags": [
+      "LINEBot"
+    ],
     "url": "https://line-checker.vercel.app"
   },
   {
     "title": "レシピ保存くん",
     "id": 2,
-    "imageUrl": "/services/recipe.webp",
+    "imageUrl": "/services/recipe-v2.webp",
     "date": "2024-02-01",
     "content": "お気に入りのレシピを保存して、いつでも見返すことができます📚",
-    "tags": ["LINEBot"],
+    "tags": [
+      "LINEBot"
+    ],
     "url": "https://recipe-bookmark.vercel.app"
   },
   {
@@ -23,16 +27,24 @@
     "imageUrl": "/services/tateka.webp",
     "date": "2023-01-11",
     "content": "LINEで簡単に建て替え計算ができるLINEBotです📱",
-    "tags": ["LINEBot", "LIFF", "割り勘"],
+    "tags": [
+      "LINEBot",
+      "LIFF",
+      "割り勘"
+    ],
     "url": "https://tateka.app"
   },
   {
     "title": "LINEでフォトコンテストを開催できる「Lコンテスト」",
     "id": 4,
-    "imageUrl": "/services/lcontest.webp",
+    "imageUrl": "/services/lcontest-v2.webp",
     "date": "2024-06-24",
     "content": "誰でもLINEでフォトコンテストを開催できるサービスです📸",
-    "tags": ["LINEBot", "LIFF", "フォトコンテスト"],
+    "tags": [
+      "LINEBot",
+      "LIFF",
+      "フォトコンテスト"
+    ],
     "url": "https://contest.iy-tech.work/"
   }
 ]
