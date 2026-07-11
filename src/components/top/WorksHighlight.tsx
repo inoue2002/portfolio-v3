@@ -6,9 +6,12 @@ import newsData from '../../data/news.json'
 import Reveal from './Reveal'
 import SectionShell from './SectionShell'
 
-const highlights = [...newsData]
-  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-  .slice(0, 3)
+// トップに載せる実績（表示順）: 同窓会LINK → tadoru → TEQSセミナー
+const HIGHLIGHT_IDS = [5, 6, 7]
+
+const highlights = newsData
+  .filter((item) => HIGHLIGHT_IDS.includes(item.id))
+  .sort((a, b) => HIGHLIGHT_IDS.indexOf(a.id) - HIGHLIGHT_IDS.indexOf(b.id))
 
 export default function WorksHighlight() {
   return (
