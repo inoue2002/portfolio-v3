@@ -1,4 +1,4 @@
-import Seo from 'src/components/Seo'
+import Seo, { SITE_URL } from 'src/components/Seo'
 import Top from 'src/components/Top'
 
 export default function Home() {
@@ -9,8 +9,8 @@ export default function Home() {
     name: 'IY Tech',
     description:
       'IY Techでは、インターネットに関するアプリケーション開発・運営・企画を行い、さまざまな業界のシステム開発に携わっています。特にLINEアプリ開発に強みを持ち、LINE公式アカウントの開発やLINE APIを利用したサービス開発を得意としています。',
-    url: 'https://youkan.me',
-    logo: 'https://youkan.me/news/portfolio.webp',
+    url: SITE_URL,
+    logo: `${SITE_URL}/news/portfolio.webp`,
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'JP',

@@ -1,5 +1,5 @@
 import News from 'src/components/News'
-import Seo from 'src/components/Seo'
+import Seo, { SITE_URL } from 'src/components/Seo'
 import newsData from 'src/data/news.json'
 import type { NewsObj } from 'src/types/news'
 
@@ -23,14 +23,14 @@ export default function NewsPage() {
       name: 'IY Tech',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://youkan.me/news/portfolio.webp',
+        url: `${SITE_URL}/news/portfolio.webp`,
       },
     },
     blogPost: newsData.map((item) => ({
       '@type': 'BlogPosting',
       headline: item.title,
       datePublished: item.date,
-      image: `https://youkan.me${item.imageUrl}`,
+      image: `${SITE_URL}${item.imageUrl}`,
       url: item.url,
     })),
   }
