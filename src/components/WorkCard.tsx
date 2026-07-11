@@ -51,13 +51,7 @@ const WorkCard = ({ item }: { item: WorkCardItem }) => (
         <Text fontWeight="extraBold" color="gray.900" lineHeight={1.6}>
           {item.title}
         </Text>
-        <Text
-          marginTop={3}
-          color="gray.600"
-          fontSize="sm"
-          lineHeight={1.8}
-          lineClamp={3}
-        >
+        <Text marginTop={3} color="gray.600" fontSize="sm" lineHeight={1.8}>
           {item.content}
         </Text>
         {/* 日付はカード下端に固定 */}
