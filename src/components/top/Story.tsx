@@ -43,6 +43,14 @@ export default function Story() {
                 ようかん / 2002年生まれ{age}歳
               </Text>
             </Box>
+            <Text
+              color="gray.600"
+              fontSize="sm"
+              lineHeight={1.9}
+              maxWidth="280px"
+            >
+              滋賀県出身、関西大学卒業。2022年に個人事業主として開業し、スタートアップを中心にサービス開発に携わる。抽象度の高い課題から素早くプロトタイプを作るのが得意。趣味は旅と料理。最近は寿司握りに挑戦中。
+            </Text>
             <SnsIcons />
           </Flex>
         </Reveal>
