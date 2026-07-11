@@ -1,9 +1,16 @@
 import News from 'src/components/News'
 import Seo, { SITE_URL } from 'src/components/Seo'
 import newsData from 'src/data/news.json'
+import servicesData from 'src/data/services.json'
 import type { NewsObj } from 'src/types/news'
 
-const news: NewsObj[] = newsData
+// news と services を統合して表示する（id はファイル間で重複するため services 側をオフセット）
+const merged = [
+  ...newsData,
+  ...servicesData.map((item) => ({ ...item, id: item.id + 100 })),
+]
+
+const news: NewsObj[] = merged
   .map((item) => ({ ...item, date: new Date(item.date) }))
   .sort((a, b) => b.date.getTime() - a.date.getTime())
 
@@ -26,7 +33,7 @@ export default function NewsPage() {
         url: `${SITE_URL}/news/portfolio.webp`,
       },
     },
-    blogPost: newsData.map((item) => ({
+    blogPost: merged.map((item) => ({
       '@type': 'BlogPosting',
       headline: item.title,
       datePublished: item.date,

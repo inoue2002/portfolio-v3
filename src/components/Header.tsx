@@ -8,7 +8,6 @@ import RequirementsHearingChat from './RequirementsHearingChat'
 
 const NAV_ITEMS = [
   { href: '/', label: 'Home' },
-  { href: '/services', label: 'Services' },
   { href: '/works', label: 'Works' },
 ]
 
