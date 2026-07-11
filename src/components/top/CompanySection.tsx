@@ -4,6 +4,13 @@ import AboutTable from '../AboutTable'
 import Reveal from './Reveal'
 import SectionShell from './SectionShell'
 
+// 本業の所属先はIY Techの取引一覧には載せない
+const EXCLUDED_COMPANIES = ['株式会社LayerX']
+
+const displayedHistory = workHistory.filter(
+  (item) => !EXCLUDED_COMPANIES.includes(item.company),
+)
+
 const ACTIVITIES = [
   {
     label: 'LINE社認定 LINE API Expert',
@@ -59,7 +66,7 @@ export default function CompanySection() {
             <Text fontWeight="extraBold" color="gray.900" marginBottom={5}>
               これまでの取引・所属
             </Text>
-            {workHistory.map((item, index) => (
+            {displayedHistory.map((item, index) => (
               <Box
                 key={index}
                 paddingY={3}

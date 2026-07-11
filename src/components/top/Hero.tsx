@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { HiCheckCircle } from 'react-icons/hi2'
 import RequirementsHearingChat from '../RequirementsHearingChat'
 
-const TRUST_ITEMS = ['LINE API Expert 認定', '取引実績 10社以上']
+const TRUST_ITEMS = ['LINE API Expert 認定', 'スタートアップ中心に開発実績多数']
 
 const fadeUp = (delay: number) => ({
   initial: { opacity: 0, y: 24 },
