@@ -2,6 +2,8 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { FC } from 'react'
 
+export const SITE_URL = 'https://www.iy-tech.work'
+
 interface MetaData {
   pageTitle?: string
   pageDescription?: string
@@ -40,8 +42,8 @@ const Seo: FC<MetaData> = ({
   const title = pageTitle ? `${pageTitle} | ${defaultTitle}` : defaultTitle
   const description = pageDescription ? pageDescription : defaultDescription
   const keywords = [...defaultKeywords, ...pageKeywords].join(', ')
-  const url = pagePath || `https://youkan.me${router.asPath}`
-  const imgUrl = pageImg || 'https://youkan.me/news/portfolio.webp'
+  const url = pagePath || `${SITE_URL}${router.asPath}`
+  const imgUrl = pageImg || `${SITE_URL}/news/portfolio.webp`
   const imgWidth = pageImgWidth || 1280
   const imgHeight = pageImgHeight || 640
 
@@ -51,8 +53,8 @@ const Seo: FC<MetaData> = ({
     '@type': 'ProfessionalService',
     name: 'IY Tech',
     description: description,
-    url: 'https://youkan.me',
-    logo: 'https://youkan.me/news/portfolio.webp',
+    url: SITE_URL,
+    logo: `${SITE_URL}/news/portfolio.webp`,
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'JP',
