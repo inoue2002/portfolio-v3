@@ -18,7 +18,7 @@ const VALUES = [
     icon: HiOutlinePresentationChartLine,
     title: '最適を提案する',
     description:
-      '投資対効果まで描いた上で、実現方法をご提案します。「作らない」提案も選択肢です。',
+      'かける費用と得られる効果のバランスを考えた上で、実現方法をご提案します。「作らない」提案も選択肢です。',
   },
   {
     icon: HiOutlineUserGroup,
