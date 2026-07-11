@@ -13,17 +13,24 @@ export interface WorkCardItem {
 
 // トップ/Worksページ共通の事例カード
 const WorkCard = ({ item }: { item: WorkCardItem }) => (
-  <a href={item.url} target="_blank" rel="noopener noreferrer">
+  <a
+    href={item.url}
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ display: 'block', height: '100%' }}
+  >
     <Box
       bg="white"
       borderRadius="xl"
       overflow="hidden"
       boxShadow="sm"
       height="100%"
+      display="flex"
+      flexDirection="column"
       transition="transform 0.25s ease, box-shadow 0.25s ease"
       _hover={{ transform: 'translateY(-4px)', boxShadow: 'md' }}
     >
-      <Box position="relative" aspectRatio={16 / 9}>
+      <Box position="relative" aspectRatio={16 / 9} flexShrink={0}>
         <Image
           src={item.imageUrl}
           alt={item.title}
@@ -33,7 +40,7 @@ const WorkCard = ({ item }: { item: WorkCardItem }) => (
           loading="lazy"
         />
       </Box>
-      <Box padding={6}>
+      <Box padding={6} display="flex" flexDirection="column" flexGrow={1}>
         <Flex gap={2} flexWrap="wrap" marginBottom={3}>
           {item.tags.map((tag) => (
             <Tag.Root key={tag} colorPalette="teal" size="sm">
@@ -53,7 +60,8 @@ const WorkCard = ({ item }: { item: WorkCardItem }) => (
         >
           {item.content}
         </Text>
-        <Text marginTop={4} color="gray.400" fontSize="xs">
+        {/* 日付はカード下端に固定 */}
+        <Text marginTop="auto" paddingTop={4} color="gray.400" fontSize="xs">
           {new Date(item.date).toLocaleDateString('ja-JP')}
         </Text>
       </Box>
